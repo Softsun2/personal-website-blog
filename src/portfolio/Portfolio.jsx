@@ -3,4 +3,3 @@ export default function Portfolio() {
     <div>Portfolio</div>
   );
 }
-

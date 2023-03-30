@@ -3,4 +3,3 @@ export default function Blog() {
     <div>Blog</div>
   );
 }
-

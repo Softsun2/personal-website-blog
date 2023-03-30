@@ -1,3 +1,18 @@
-a {
-  text-decoration: none;
+@font-face {
+    font-family: GrotesqueMT;
+    src: url("./font/GrotesqueMT.otf") format("opentype");
+}
+@font-face {
+    font-family: GrotesqueMT;
+    font-weight: bold;
+    src: url("./font/GrotesqueMT-Bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: BrieteGrotesk;
+    src: url("./font/breite-grotesk-regular.otf") format("opentype");
+}
+
+body {
+    font-family: 'GrotesqueMT';
 }
