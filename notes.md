@@ -1,5 +1,5 @@
 # React Notes
-I found the [React tutorial](https://reactrouter.com/en/main/start/tutorial) helpful
+I found this [React routing tutorial](https://reactrouter.com/en/main/start/tutorial) helpful
 
 ## File Structure
 I'm concerned with the fact that the file structure of the React apps I've seen so far don't separate browser functionality from its layout within the `src` directory. I like how intuitive/flexible it is to organize with the component pattern. Still want to read about view/page models/patterns.. Is that convention or convenience?
@@ -31,6 +31,9 @@ JSX is markup similar to html that is translated into actual javascript. Be care
 /* incorrect */
 <div class='card'>
 ```
+
+## Props
+Components have the parameter `props`. `props` is a key value attribute set where the keys are user defined. Values are passed to the componet as JSX attributes.
 
 ## State
 Is there a functional implementation of state? Regardless the concept is simple yet wasn't obvious at first glance. Using react's `useState` component hook, react will "manage" a local variable for you. This reminds me of setting static function variables in **C**. Where `useState` is called with its initial value and returns a twople of `[stateValue, stateAccessor]`. Where `stateValue` is the current state value and `stateAccessor` is a function whose parameter is the new value of the state.
@@ -65,4 +68,4 @@ Some components require data to render. A `loader` may be declared for a route. 
 More React abstraction, under-the-hood magic. React emulates making requests to a server using client side-routing and sends them to a route `action`.
 
 #### Using the `Form` tag (instead of `form`)
-
+bruh
