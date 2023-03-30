@@ -3,10 +3,10 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import "./index.css";
-import Root from "./root/Root";
-import Portfolio from "./portfolio/Portfolio";
-import Blog from "./blog/Blog";
-import Gallery from "./gallery/Gallery";
+import Root from "./components/root/Root";
+import Portfolio from "./components/portfolio/Portfolio";
+import Blog from "./components/blog/Blog";
+import Gallery from "./components/gallery/Gallery";
 /* declare path component pairs */
 const pathComponentMap = {
   portfolio: <Portfolio />,

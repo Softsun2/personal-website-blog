@@ -1,6 +1,6 @@
 import { NavLink, Link, Outlet } from "react-router-dom";
 import s from "./Root.module.css";
-import classNames from "../util/formatter";
+import classNames from "../../util/formatter";
 
 export default function Root(props) {
   const paths = props.paths;
