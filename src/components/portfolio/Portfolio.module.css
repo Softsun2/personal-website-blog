@@ -1,0 +1,15 @@
+.portfolioHeader {
+    margin: 1em 0%;
+    padding: 1em;
+    text-align: left;
+    background-image: url(../../image/behind-cleary.jpg);
+    background-size: 100vw;
+}
+
+.headShot {
+    width: 25vw;
+    height: 25vh;
+}
+
+.contactInfo {
+}

@@ -1,15 +1,16 @@
-import { NavLink, Link, Outlet } from "react-router-dom";
-import s from "./Root.module.css";
-import classNames from "../../util/formatter";
+import { NavLink, Link } from "react-router-dom";
+import s from "./Header.module.css";
+import name from "../../image/NAME.png";
+import { classNames } from "../../util/util";
 
-export default function Root(props) {
-  const paths = props.paths;
+export default function Header(props) {
+  const paths = props.navPaths;
   return (
     <div className={s.headerContainer}>
       <header>
         <h1 className={s.name}>
-          <Link to="/" className={s.link}>
-            CMAEBREA
+          <Link to="/">
+            <img className={s.nameImg} src={name} alt="PEYTON OKUBO" />
           </Link>
         </h1>
         <nav className={s.rootNav}>
@@ -22,12 +23,12 @@ export default function Root(props) {
                   : s.rootNavLink;
               }}
             >
-              {path}
+              {/* strip the leading slash */}
+              {path.slice(1)}
             </NavLink>
           ))}
         </nav>
       </header>
-      <Outlet />
     </div>
   );
 }

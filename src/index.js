@@ -1,32 +1,46 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  Navigate,
+  RouterProvider,
+} from "react-router-dom";
+import { composeComponents } from "./util/util";
 
 import "./index.css";
-import Root from "./components/root/Root";
+import Header from "./components/header/Header";
 import Portfolio from "./components/portfolio/Portfolio";
-import Blog from "./components/blog/Blog";
-import Gallery from "./components/gallery/Gallery";
-/* declare path component pairs */
-const pathComponentMap = {
-  portfolio: <Portfolio />,
-  blog: <Blog />,
-  gallery: <Gallery />,
-};
+import Cmaebrea from "./components/cmaebrea/Cmaebrea";
 
+/* paths that should be rendered in the nav */
+const navPaths = ["/portfolio", "/cmaebrea"];
+/* this is dumb haha */
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Root paths={Object.keys(pathComponentMap)} />,
-    loader: null,
-    action: null,
+    element: composeComponents(
+      <Navigate to="/portfolio" />
+      // footer or somthing later
+    ),
     errorElement: null,
-    children: Object.keys(pathComponentMap).map((path) => {
-      return {
-        path: path,
-        element: pathComponentMap[path],
-      };
-    }),
+  },
+  {
+    path: "/portfolio",
+    element: composeComponents(
+      <Header navPaths={navPaths} />,
+      <Portfolio />
+      // footer or somthing later
+    ),
+    errorElement: null,
+  },
+  {
+    path: "/cmaebrea",
+    element: composeComponents(
+      <Header navPaths={navPaths} />,
+      <Cmaebrea />
+      // footer or somthing later
+    ),
+    errorElement: null,
   },
 ]);
 
