@@ -13,6 +13,11 @@
     src: url("./font/breite-grotesk-regular.otf") format("opentype");
 }
 
+@font-face {
+    font-family: SuisseWorks;
+    src: url("./font/SuisseWorks-Regular.ttf");
+}
+
 body {
-    font-family: 'GrotesqueMT';
+    font-family: 'Helvetica';
 }

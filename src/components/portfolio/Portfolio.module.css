@@ -13,3 +13,16 @@
 
 .contactInfo {
 }
+
+p {
+    font-family: 'Helvetica';
+    font-size: 5px;
+    line-height: 1.4em;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    max-width: 300px;
+}
+
+.columns {
+    column-count: 2;
+}
