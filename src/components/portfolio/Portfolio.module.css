@@ -1,20 +1,7 @@
-.portfolioHeader {
-    margin: 1em 0%;
-    padding: 1em;
-    text-align: left;
-    background-image: url(../../image/behind-cleary.jpg);
-    background-size: 100vw;
+.columns {
+    column-count: 2;
 }
-
-.headShot {
-    width: 25vw;
-    height: 25vh;
-}
-
-.contactInfo {
-}
-
-p {
+.portfolioSection {
     font-family: 'Helvetica';
     font-size: 5px;
     line-height: 1.4em;
@@ -22,7 +9,13 @@ p {
     word-wrap: break-word;
     max-width: 300px;
 }
+.portfolioSection p {
+    margin-top: 0%;
+}
+.portfolioSection h2 {
+    margin-bottom: 0%;
+}
 
-.columns {
-    column-count: 2;
+#contact h2 {
+    font-size: 5px;
 }
