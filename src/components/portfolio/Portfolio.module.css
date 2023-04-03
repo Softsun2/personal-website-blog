@@ -1,13 +1,16 @@
-.columns {
+.portfolio {
     column-count: 2;
+    max-width: 800px;
+}
+.title {
+    text-align: center;
 }
 .portfolioSection {
     font-family: 'Helvetica';
-    font-size: 5px;
+    font-size: 12px;
     line-height: 1.4em;
     white-space: pre-wrap;
     word-wrap: break-word;
-    max-width: 300px;
 }
 .portfolioSection p {
     margin-top: 0%;
@@ -17,5 +20,5 @@
 }
 
 #contact h2 {
-    font-size: 5px;
+    font-size: 12px;
 }

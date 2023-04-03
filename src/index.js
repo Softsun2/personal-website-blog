@@ -18,10 +18,7 @@ const navPaths = ["/portfolio", "/cmaebrea"];
 const router = createBrowserRouter([
   {
     path: "/",
-    element: composeComponents(
-      <Navigate to="/portfolio" />
-      // footer or somthing later
-    ),
+    element: composeComponents(<Navigate to="/portfolio" />),
     errorElement: null,
   },
   {

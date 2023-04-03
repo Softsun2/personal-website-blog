@@ -6,7 +6,7 @@ import { classNames } from "../../util/util";
 export default function Header(props) {
   const paths = props.navPaths;
   return (
-    <div className={s.headerContainer}>
+    <div className={s.header}>
       <header>
         <h1 className={s.name}>
           <Link to="/">
