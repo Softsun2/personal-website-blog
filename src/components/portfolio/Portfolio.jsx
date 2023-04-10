@@ -20,7 +20,6 @@ function PortfolioSubSection(props) {
     </div>
   );
 }
-
 function PortfolioFigure(props) {
   const { id, src, caption } = props;
   return (
