@@ -34,6 +34,9 @@
 #zine h3 {
     font-weight: normal;
 }
+#zine h4 {
+    font-weight: normal;
+}
 
 /* tldrPage */
 #tldrPage {
@@ -160,21 +163,33 @@
     padding-top: 50px;
     display: flex;
     flex-direction: column;
+    gap: 20px;
 }
 #projectsPage .project {
-    display: flex;
-    flex-direction: row;
-    align-items: end;
-    gap: 200px;
+    max-width: var(--max-width);
+}
+#projectsPage img:hover {
+    cursor: pointer;
+}
+#projectsPage img {
+    max-width: 300px;
+}
+#projectsPage h3 {
+    margin-top: 0;
 }
 #projectsPage p {
     margin: 0;
 }
-#projectsPage .projectHeader {
+#projectsPage .projectContent {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+#projectsPage .projectText {
     display: flex;
     flex-direction: column;
 }
-#projectsPage #fibBSPViTodoDemo {
+#projectsPage iframe {
     width: 80vw;
     height: 50vh;
 }
