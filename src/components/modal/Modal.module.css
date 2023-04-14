@@ -7,7 +7,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    filter: drop-shadow(0 0 1.4em rgba(0, 0, 0, 0.2));
+    filter: drop-shadow(0 0 1em rgba(0, 0, 0, 0.4));
 }
 .modal button {
     position: absolute;
@@ -23,6 +23,7 @@
     transform: translate(-50%, -50%);
 }
 .modalBackdrop {
+    background-color: rgba(0, 0, 0, 0.15);
     position: fixed;
     z-index: 1;
     width: 100%;

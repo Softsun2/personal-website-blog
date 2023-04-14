@@ -247,13 +247,19 @@ const ProjectsPage = () => {
           title="fibBSPViTodo"
           description="VI-TODO is a take on the typical to-do web app. VI-TODO uses binary space partitioning in a Fibonacci layout to display tasks, similar to layouts of common Unix window managers such as DWM, BSPWM, and I3. The user can interact with the to-do tasks via basic Vi keymaps and motions. Special commands are implemented to filter tasks based on completion status. I was motivated to build this project to better understand DOM manipulation and more complex layout strategies using PUG, Javascript, ExpressJS, MYSQL, and CSS."
           demoThumbnail="https://cdn-cf-east.streamable.com/image/pqlryv.jpg?Expires=1681677621335&Key-Pair-Id=APKAIEYUVEN4EVB2OKEQ&Signature=MmtoZkkegd7P3Mm4~b6XJaWV5xOh79cJ~fwJw9cY4YV6k6AjTb97ybHibdqSza8xFtiiZUxozAuw09UmpY3lvto-6fcQEXO9CarIHwNtpKUC34KK1BLb7VSnr-E06C0xinNRl45XEnuaE0yQz2BDZlpNw5a6wFez3uOLgqMzL~Wq4~2bcrWTY83q4eushWRDB9tgOYcwXx5VdHZs9Qhl7wNQn5dFepAeVRCogH2PXJ8hWxpxWxX-DKBXWNZBYSNw4Evk-zvRNvLhOyvTKvDnR2pmDa0pmO52Fezo10G-FOybgR1kaAa6LdLUauP4QT1UE9f0fq91yjZOwcYUZKGsyg__"
-          demoSrc="https://streamable.com/e/pqlryv?autoplay=1&nocontrols=1"
+          demoSrc="https://streamable.com/e/pqlryv?autoplay=1"
         />
         <Project
           title="Turi"
           description="Last May I had the opportunity to take a mechatronics class abroad in Switzerland at the Zurich University of Applied Sciences. Teams were tasked with constructing a line following robot. This was the first time I experienced a cross-disciplinary team with mechanical engineers, computer engineers, and computer scientists. The aspect of designing software with hardware in mind was an engaging challenge. It was pleasant to develop code that took on a different structure than what I had been used to seeing in my computer science course. It took a few long nights but implementing custom sensor drivers, a proportional control system, a complex state machine, and obstacle avoidance were rewarding. I was proud that our robot came in second place."
+          demoThumbnail="https://cdn-cf-east.streamable.com/image/569dcp_2.jpg?Expires=1681706820&Signature=Ds7-SKldVjGwi4cf6oQxsUTnkCZVdX0TheCdVeAblZdlRahqpYo4AKrQJ3cxZ9Q9IYvnUm0gvXtkwIlJGVgbP272aupUZvr71Oz02sKYZD7UxD4Cmiq5obnlgLpbsfXwWeV~AxKkcuIRfEvKN0rf0vYwl2kByY6nGaVZa3bSerXSi7frTdA-CN7ZQREkPSyPoLCPzMx8PkiFE31TGPkvgyBU9MNSpPOpWHfpiUFYSZje0~VPQjiLAJLy8krmxUUSb~uFUg7ROUOUKDAsO8l5xOclRarbRNhi1DhfJ9HKaGfPGMAoWBs9ZpkTJibKcSPtLPUfH-gnOtnmMzkpEmN0Mw__&Key-Pair-Id=APKAIEYUVEN4EVB2OKEQ"
+          demoSrc="https://streamable.com/e/569dcp?autoplay=1"
+        />
+        <Project
+          title="This!"
+          description="With a growing interest in web development I wanted to learn the widely used front-end framework React. The goal of this website was to both display my experience as well as structuring a project around React. I’m fond of the seamlessness of single page applications and the flexibility of components and interfaces. However, I’m not sure a React app best suits my use case, as an article styled portfolio. I’m interested in building static site generator. Stay tuned!"
           demoThumbnail="https://cdn-cf-east.streamable.com/image/o0d7m_1.jpg?Expires=1681677621353&Key-Pair-Id=APKAIEYUVEN4EVB2OKEQ&Signature=LQOn6XsR5QAaFZQTDiGeQSzsFxfGSu9JRNQAscvOh8O1rIxjHBqEk2tuZeQURoOW1J8kAX7egHJEmOLysdwihVARTuN5QFXiNmcb9VHUOs4fpA3AwkrlayrGlcOGG5exRtSn82tT9RvYRRnAaWsGEwPMyzk8Jzu0nlmHyAMMjFvaQ~ZBaZ3BYJp5JKnJE7t7WnT2BGG5Iyn8LxV~LqbAUGZD5adI94aLTbzkexT5iVZepwz2n6OQgjyl0L29sqCk8M9~jLdAHB-lagPDfhpXKHzXacybTZrF4Er5vhC~ImCxnjlMC3Cbpx4LLvhFf4v-kMzCFNEcsCV0UNLCFCv1qA__"
-          demoSrc="https://streamable.com/e/o0d7m?autoplay=1&nocontrols=1"
+          demoSrc="https://streamable.com/e/o0d7m?autoplay=1"
         />
       </div>
     </div>
