@@ -25,10 +25,10 @@
   margin: 0%;
 }
 .rootNavLink {
-  color: black;
+  color: grey;
   text-decoration: none;
   font-size: 18px;
 }
 .activeNavLink{
-  color: grey;
+  color: black;
 }

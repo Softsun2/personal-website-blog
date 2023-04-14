@@ -9,8 +9,9 @@ import { composeComponents } from "./util/util";
 
 import "./index.css";
 import Header from "./components/header/Header";
-import Portfolio from "./components/portfolio/Portfolio";
 import Cmaebrea from "./components/cmaebrea/Cmaebrea";
+import Zine from "./components/portfolio/Zine";
+import { portfolioPages } from "./components/portfolio/Zine";
 
 /* paths that should be rendered in the nav */
 const navPaths = ["/portfolio", "/cmaebrea"];
@@ -25,7 +26,7 @@ const router = createBrowserRouter([
     path: "/portfolio",
     element: composeComponents(
       <Header navPaths={navPaths} />,
-      <Portfolio />
+      <Zine pages={portfolioPages} />
       // footer or somthing later
     ),
     errorElement: null,

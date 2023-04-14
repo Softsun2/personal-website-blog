@@ -1,0 +1,180 @@
+:root {
+    --max-width: 800px;
+}
+
+
+/* zine */
+#zine {
+    font-family: 'Alegreya';
+    font-size: 16px;
+    line-height: 1em;
+    margin: 1.4em;
+}
+#zine #pageNumber {
+    color: grey;
+    position: absolute;
+    bottom: 2.8em;
+}
+#zine #pageNav #forwardButton {
+    position: absolute;
+    bottom: 1.4em;
+    left: calc(var(--max-width) - 1.4em);
+}
+#zine #pageNav #backwardButton {
+    position: absolute;
+    bottom: 1.4em;
+}
+#zine a {
+    color: black;
+    text-decoration: underline;
+}
+#zine h2 {
+    font-weight: normal;
+}
+#zine h3 {
+    font-weight: normal;
+}
+
+/* tldrPage */
+#tldrPage {
+    display: flex;
+    flex-direction: column;
+}
+#tldrPage #header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    max-width: var(--max-width);
+}
+#tldrPage .pageNavLink {
+    text-decoration: underline;
+}
+#tldrPage .pageNavLink:hover {
+    cursor: pointer;
+}
+#tldrPage ul {
+    padding-top: 50px;
+    list-style-type: none;
+    text-align: end;
+}
+#tldrPage li {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 1em;
+}
+#tldrPage figure {
+    margin: 0;
+}
+#tldrPage img {
+    padding-top: 50px;
+    width: 500px;
+}
+#tldrPage figcaption {
+    font-style: italic;
+    font-size: 10px
+}
+
+/* introPage */
+#introPage {
+    display: flex;
+    flex-direction: column;
+}
+#introPage #meImages {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 5px;
+}
+#introPage #me {
+    max-width: 400px;
+}
+#introPage p {
+    max-width: 400px;
+}
+
+/* educationPage */
+#educationPage {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+}
+#educationPage #campusImages {
+    display: flex;
+    flex-direction: column;
+}
+#educationPage p {
+    width: 400px;
+}
+#educationPage img {
+    width: 300px;
+}
+#educationPage figure {
+    margin: 0;
+}
+#educationPage figcaption {
+    font-style: italic;
+    font-size: 10px;
+}
+
+/* Experience */
+#experiencePage h2 {
+    padding-bottom: 50px;;
+}
+#experiencePage h3 {
+    margin: 0;
+}
+#experiencePage h4 {
+    margin: 0;
+    font-weight: normal;
+}
+#experiencePage #experiences {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    max-width: var(--max-width);
+}
+#experiencePage .experienceTitle {
+    display: flex;
+    gap: 25px;
+    align-items: baseline;
+}
+#experiencePage img {
+    width: 300px;
+}
+#experiencePage aside {
+    padding-top: 50px;
+}
+#experiencePage figure {
+    margin-left: 0;
+}
+#experiencePage figcaption {
+    font-style: italic;
+    font-size: 10px;
+    line-height: 1em;
+}
+
+/* projectsPage */
+#projectsPage #projects {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+#projectsPage .project {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    gap: 200px;
+}
+#projectsPage p {
+    margin: 0;
+}
+#projectsPage .projectHeader {
+    display: flex;
+    flex-direction: column;
+}
+#projectsPage #fibBSPViTodoDemo {
+    width: 80vw;
+    height: 50vh;
+}
