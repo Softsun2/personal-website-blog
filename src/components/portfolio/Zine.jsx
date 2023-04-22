@@ -1,14 +1,22 @@
-import { useState, createElement } from "react";
+import { useState, createElement, useEffect } from "react";
 import s from "./Zine.module.css";
 import Modal from "../modal/Modal";
 
 // local images
 import marion from "../../image/20.jpg";
+
 import me from "../../image/me.JPG";
 import terminalBrr from "../../image/terminal-brr-gif.gif";
+
 import campusDay from "../../image/campus-day.JPEG";
 import firstAssignment from "../../image/first-coding-assignment.JPEG";
+
 import researchAssistant from "../../image/research-graph.png";
+
+import turiCar from "../../image/turi-car.jpg";
+import turiGroup from "../../image/turi-group.JPG";
+import turiGif from "../../image/turi-gif.gif";
+import { getLastCommit } from "../../util/util";
 
 const TldrPage = ({ setPage }) => {
   return (
@@ -78,10 +86,9 @@ const IntroPage = () => {
         <img id={s.terminalBrr} src={terminalBrr} alt="terminalBrr" />
       </div>
       <p>
-        My name is Peyton Okubo. I’m a person! This is where I'm informally
-        displaying my human experience. Experience relevant to the community and
-        industry I’m eager to be a part of as a recent computer science
-        graduate.
+        My name is Peyton Okubo. This is where I'm informally displaying my
+        human experience. Experience relevant to the community and industry I’m
+        eager to be a part of as a recent computer science graduate.
       </p>
     </div>
   );
@@ -208,66 +215,181 @@ const ExperiencePage = () => {
   );
 };
 
-const ProjectsPage = () => {
-  function Project(props) {
-    const [modalIsOpen, setModalState] = useState(false);
-    const { title, description, demoThumbnail, demoSrc } = props;
-    return (
-      <div className={s.project}>
-        <div className={s.projectContent}>
-          <img
-            onClick={() => setModalState(true)}
-            src={demoThumbnail}
-            alt={title}
-          />
-          <div className={s.projectText}>
-            <h3>{title}</h3>
-            <p>{description}</p>
+const FibBSPViTodo = () => {
+  return (
+    <div id={s.fibBSPViTodoPage}>
+      <h2>Projects</h2>
+      <div className={s.fibBSPViTodoContent}>
+        <h3>fibBSPViTodo</h3>
+        <img src={marion} alt="marion"></img>
+        <p>
+          VI-TODO is a take on the typical to-do web app. VI-TODO uses binary
+          space partitioning in a Fibonacci layout to display tasks, similar to
+          layouts of common Unix window managers such as DWM, BSPWM, and I3. The
+          user can interact with the to-do tasks via basic Vi keymaps and
+          motions. Special commands are implemented to filter tasks based on
+          completion status. I was motivated to build this project to better
+          understand DOM manipulation and more complex layout strategies using
+          PUG, Javascript, ExpressJS, MYSQL, and CSS.
+        </p>
+        {/* interactive embed? Do this last... */}
+      </div>
+    </div>
+  );
+};
+const Turi = () => {
+  return (
+    <div id={s.turiPage}>
+      <h2>Projects</h2>
+      <h3>Turi</h3>
+      <div id={s.turiCol}>
+        <figure>
+          <img id={s.turiGroup} src={turiGroup} alt="turiGroup" />
+          <figcaption>Competition Day (I'm in orange), 2022</figcaption>
+        </figure>
+        <div id={s.turiRow}>
+          <p>
+            Last May I had the opportunity to take a mechatronics class abroad
+            in Switzerland at the Zurich University of Applied Sciences. Teams
+            were tasked with constructing a line following robot. This was the
+            first time I experienced a cross-disciplinary team with mechanical
+            engineers, computer engineers, and computer scientists. The aspect
+            of designing software with hardware in mind was an engaging
+            challenge. It was pleasant to develop code that took on a different
+            structure than what I had been used to seeing in my computer science
+            course. It took a few long nights but implementing custom sensor
+            drivers, a proportional control system, a complex state machine, and
+            obstacle avoidance were rewarding. I was proud that our robot came
+            in second place.
+          </p>
+          <div className={s.carImages}>
+            <figure>
+              <img id={s.turiGif} src={turiGif} alt="turiGif" />
+              <figcaption>Early Iteration Software Demo</figcaption>
+            </figure>
+            <figure>
+              <img id={s.turiCar} src={turiCar} alt="turiCar" />
+              <figcaption>Final Robot Assembly</figcaption>
+            </figure>
           </div>
         </div>
-        {modalIsOpen && (
-          <Modal setModalState={setModalState}>
-            <iframe
-              title="fibBSPViTodo"
-              src={demoSrc}
-              frameborder="0"
-              allowfullscreen
-              allow="autoplay"
-            ></iframe>
-          </Modal>
-        )}
       </div>
+    </div>
+  );
+};
+const This = () => {
+  const [lastCommit, setLastCommit] = useState(null);
+  useEffect(() => {
+    getLastCommit("softsun2", "personal-website-blog").then((res) =>
+      setLastCommit(res)
     );
-  }
+  });
   return (
-    <div id={s.projectsPage}>
+    <div id={s.thisPage}>
       <h2>Projects</h2>
-      <div id={s.projects}>
-        <Project
-          title="fibBSPViTodo"
-          description="VI-TODO is a take on the typical to-do web app. VI-TODO uses binary space partitioning in a Fibonacci layout to display tasks, similar to layouts of common Unix window managers such as DWM, BSPWM, and I3. The user can interact with the to-do tasks via basic Vi keymaps and motions. Special commands are implemented to filter tasks based on completion status. I was motivated to build this project to better understand DOM manipulation and more complex layout strategies using PUG, Javascript, ExpressJS, MYSQL, and CSS."
-          demoThumbnail="https://cdn-cf-east.streamable.com/image/pqlryv.jpg?Expires=1681677621335&Key-Pair-Id=APKAIEYUVEN4EVB2OKEQ&Signature=MmtoZkkegd7P3Mm4~b6XJaWV5xOh79cJ~fwJw9cY4YV6k6AjTb97ybHibdqSza8xFtiiZUxozAuw09UmpY3lvto-6fcQEXO9CarIHwNtpKUC34KK1BLb7VSnr-E06C0xinNRl45XEnuaE0yQz2BDZlpNw5a6wFez3uOLgqMzL~Wq4~2bcrWTY83q4eushWRDB9tgOYcwXx5VdHZs9Qhl7wNQn5dFepAeVRCogH2PXJ8hWxpxWxX-DKBXWNZBYSNw4Evk-zvRNvLhOyvTKvDnR2pmDa0pmO52Fezo10G-FOybgR1kaAa6LdLUauP4QT1UE9f0fq91yjZOwcYUZKGsyg__"
-          demoSrc="https://streamable.com/e/pqlryv?autoplay=1"
-        />
-        <Project
-          title="Turi"
-          description="Last May I had the opportunity to take a mechatronics class abroad in Switzerland at the Zurich University of Applied Sciences. Teams were tasked with constructing a line following robot. This was the first time I experienced a cross-disciplinary team with mechanical engineers, computer engineers, and computer scientists. The aspect of designing software with hardware in mind was an engaging challenge. It was pleasant to develop code that took on a different structure than what I had been used to seeing in my computer science course. It took a few long nights but implementing custom sensor drivers, a proportional control system, a complex state machine, and obstacle avoidance were rewarding. I was proud that our robot came in second place."
-          demoThumbnail="https://cdn-cf-east.streamable.com/image/569dcp_2.jpg?Expires=1681706820&Signature=Ds7-SKldVjGwi4cf6oQxsUTnkCZVdX0TheCdVeAblZdlRahqpYo4AKrQJ3cxZ9Q9IYvnUm0gvXtkwIlJGVgbP272aupUZvr71Oz02sKYZD7UxD4Cmiq5obnlgLpbsfXwWeV~AxKkcuIRfEvKN0rf0vYwl2kByY6nGaVZa3bSerXSi7frTdA-CN7ZQREkPSyPoLCPzMx8PkiFE31TGPkvgyBU9MNSpPOpWHfpiUFYSZje0~VPQjiLAJLy8krmxUUSb~uFUg7ROUOUKDAsO8l5xOclRarbRNhi1DhfJ9HKaGfPGMAoWBs9ZpkTJibKcSPtLPUfH-gnOtnmMzkpEmN0Mw__&Key-Pair-Id=APKAIEYUVEN4EVB2OKEQ"
-          demoSrc="https://streamable.com/e/569dcp?autoplay=1"
-        />
-        <Project
-          title="This!"
-          description="With a growing interest in web development I wanted to learn the widely used front-end framework React. The goal of this website was to both display my experience as well as structuring a project around React. I’m fond of the seamlessness of single page applications and the flexibility of components and interfaces. However, I’m not sure a React app best suits my use case, as an article styled portfolio. I’m interested in building static site generator. Stay tuned!"
-          demoThumbnail="https://cdn-cf-east.streamable.com/image/o0d7m_1.jpg?Expires=1681677621353&Key-Pair-Id=APKAIEYUVEN4EVB2OKEQ&Signature=LQOn6XsR5QAaFZQTDiGeQSzsFxfGSu9JRNQAscvOh8O1rIxjHBqEk2tuZeQURoOW1J8kAX7egHJEmOLysdwihVARTuN5QFXiNmcb9VHUOs4fpA3AwkrlayrGlcOGG5exRtSn82tT9RvYRRnAaWsGEwPMyzk8Jzu0nlmHyAMMjFvaQ~ZBaZ3BYJp5JKnJE7t7WnT2BGG5Iyn8LxV~LqbAUGZD5adI94aLTbzkexT5iVZepwz2n6OQgjyl0L29sqCk8M9~jLdAHB-lagPDfhpXKHzXacybTZrF4Er5vhC~ImCxnjlMC3Cbpx4LLvhFf4v-kMzCFNEcsCV0UNLCFCv1qA__"
-          demoSrc="https://streamable.com/e/o0d7m?autoplay=1"
-        />
-      </div>
+      <h3>
+        <a
+          href="https://github.com/Softsun2/personal-website-blog.git"
+          target="_blank"
+          rel="noreferrer"
+        >
+          This Website
+        </a>
+      </h3>
+      <p>
+        With a growing interest in web development, I wanted to learn the widely
+        used front-end framework React. The goal of this website was to both
+        display my experience as well as structuring a project around React. I’m
+        fond of the seamlessness of single-page applications and the flexibility
+        of components and interfaces.
+      </p>
+      <p>Last commit: {lastCommit}</p>
     </div>
   );
 };
 
 const ForFunPage = () => {
-  return <div>forFunPage </div>;
+  return (
+    <div id={s.forFunPage}>
+      <h2>For Fun</h2>
+      <div className={s.columns}>
+        <div className={s.media}>
+          <figure>
+            <img src={marion} alt="marion" />
+            <figcaption>marion</figcaption>
+          </figure>
+          <figure>
+            <img src={marion} alt="marion" />
+            <figcaption>marion</figcaption>
+          </figure>
+          <figure>
+            <img src={marion} alt="marion" />
+            <figcaption>marion</figcaption>
+          </figure>
+        </div>
+        <article>
+          <p>
+            I was drawn into the world of configuration and personalized
+            development environments by the text editor Vim. Building a
+            customized text editor with the minimum features to suit my needs
+            appealed to me. I like to know how my software works; I like to be
+            in control of how my software works. I like when my software does
+            exactly what it should and no more. There are considerable drawbacks
+            to minimizing/personalizing your development tools; using these
+            tools is a hobby of mine and I only do so when I can get away with
+            it. Working with lower-level applications has taught me much about
+            operating systems and command-line workflow. This led me down a
+            rabbit hole of configurability and reproducibility philosophies.
+          </p>
+          <h3>Themeing</h3>
+          <p>
+            I value uniformity and flexibility when it comes to design. I’ve
+            been casually theming my desktop environments for about a year now
+            and Flavours is the tool I use to do so. Flavours is a tool that
+            manages base16 color schemes across common Unix applications. Where
+            users can apply color scheme changes in real-time to their
+            configured apps via the command line.
+          </p>
+          <p>
+            Flavours was great but its implementation contradicted declarative
+            configuration philosophies that are conventional to most Unix
+            applications. Namely, configuring the program's set of color schemes
+            and templates had to be done imperatively and manually.
+          </p>
+          <p>
+            I took this opportunity to learn the basics of a new language (Rust)
+            and made my first open-source contribution. I added new fields to
+            the configuration file to declare the color scheme and template
+            sources and provided appropriate parsing, retrieving, and installing
+            of these sources. This made it so users could declare the sources of
+            their desired color schemes and templates in their configuration
+            file for Flavours and the sources would be installed automatically.
+          </p>
+          <p>
+            I use Flavours in tandem with an image filtering library (Image Go
+            Nord) to theme my desktop applications and wallpaper on the fly.
+          </p>
+          <h3>Vim</h3>
+          <p>
+            Currently, I’m building a Neovim configuration in Lua. Which has
+            taught me about language server protocols, language parsing, and
+            modular configuration principles.
+          </p>
+          <h3>Nix</h3>
+          <p>
+            I manage my systems configurations and packages with the Nix
+            ecosystem. Confusingly Nix is a package manager, language, and
+            operating system. Nix packages and Nix configurations are declared
+            in the pure functional language Nix. In short, this means one can
+            manage an entire system declaratively and reproducibly. Nix has its
+            quirks but it allows me to flexibly manage my systems and
+            development environments, it also does a wonderful job of preventing
+            dependency conflicts.
+          </p>
+        </article>
+      </div>
+    </div>
+  );
 };
 
 export const portfolioPages = [
@@ -275,7 +397,9 @@ export const portfolioPages = [
   IntroPage,
   EducationPage,
   ExperiencePage,
-  ProjectsPage,
+  FibBSPViTodo,
+  Turi,
+  This,
   ForFunPage,
 ];
 

@@ -9,6 +9,7 @@
     font-size: 16px;
     line-height: 1em;
     margin: 1.4em;
+    max-width: var(--max-width);
 }
 #zine #pageNumber {
     color: grey;
@@ -40,6 +41,11 @@
 #zine h4 {
     font-weight: normal;
 }
+#zine figcaption {
+    font-style: italic;
+    font-size: 10px;
+    line-height: 1em;
+}
 
 /* tldrPage */
 #tldrPage {
@@ -51,7 +57,6 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: baseline;
-    max-width: var(--max-width);
 }
 #tldrPage .pageNavLink {
     text-decoration: underline;
@@ -76,10 +81,6 @@
 #tldrPage img {
     padding-top: 50px;
     width: 500px;
-}
-#tldrPage figcaption {
-    font-style: italic;
-    font-size: 10px
 }
 
 /* introPage */
@@ -119,10 +120,6 @@
 #educationPage figure {
     margin: 0;
 }
-#educationPage figcaption {
-    font-style: italic;
-    font-size: 10px;
-}
 
 /* Experience */
 #experiencePage h2 {
@@ -139,7 +136,6 @@
     display: flex;
     flex-direction: row;
     gap: 50px;
-    max-width: var(--max-width);
 }
 #experiencePage .experienceTitle {
     display: flex;
@@ -155,44 +151,77 @@
 #experiencePage figure {
     margin-left: 0;
 }
-#experiencePage figcaption {
-    font-style: italic;
-    font-size: 10px;
-    line-height: 1em;
-}
 
 /* projectsPage */
-#projectsPage #projects {
-    padding-top: 50px;
+
+#fibBSPViTodoPage h2 {
+    margin-bottom: 50px;
+}
+#fibBSPViTodoPage .fibBSPViTodoContent {
     display: flex;
     flex-direction: column;
-    gap: 20px;
 }
-#projectsPage .project {
-    max-width: var(--max-width);
+#fibBSPViTodoPage img {
+    width: 80%;
+    align-self: flex-end;
 }
-#projectsPage img:hover {
-    cursor: pointer;
+#fibBSPViTodoPage h3 {
+    align-self: flex-end;
 }
-#projectsPage img {
-    max-width: 300px;
+#fibBSPViTodoPage p {
+    width: calc(var(--max-width)/2);
+    align-self: flex-end;
 }
-#projectsPage h3 {
-    margin-top: 0;
+
+/* turiPage */
+#turiPage p {
+    width: 400px;
 }
-#projectsPage p {
-    margin: 0;
+#turiPage #turiCol {
+    display: flex;
+    flex-direction: column;
 }
-#projectsPage .projectContent {
+#turiPage #turiRow {
     display: flex;
     flex-direction: row;
-    gap: 50px;
+    justify-content: space-between;
 }
-#projectsPage .projectText {
+#turiPage figure {
+    margin: 0;
+}
+#turiPage .carImages {
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
 }
-#projectsPage iframe {
-    width: 80vw;
-    height: 50vh;
+#turiPage #turiGroup {
+    width: 400px;
+}
+#turiPage #turiCar {
+    width: 200px;
+}
+#turiPage #turiGif {
+    width: 200px
+}
+#turiPage h3 {
+    padding-top: 50px;
+}
+
+/* thisPage */
+#thisPage {
+    width: 400px;
+}
+#thisPage h3 {
+    padding-top: 50px;
+}
+
+/* forFunPage */
+#forFunPage .columns {
+    display: flex;
+    flex-direction: row;
+}
+
+#forFunPage img {
+    width: 300px;
 }
