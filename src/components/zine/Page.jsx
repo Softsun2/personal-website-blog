@@ -1,5 +1,5 @@
-import { useState, createElement, useEffect } from "react";
-import s from "./Zine.module.css";
+import { useState, useEffect, createElement } from "react";
+import s from "./Pages.module.css";
 import Modal from "../modal/Modal";
 
 // local images
@@ -17,6 +17,18 @@ import turiCar from "../../image/turi-car.jpg";
 import turiGroup from "../../image/turi-group.JPG";
 import turiGif from "../../image/turi-gif.gif";
 import { getLastCommit } from "../../util/util";
+
+export default function Page(props) {
+  const { setPage, page, children } = props;
+  return (
+    <div className={s.zinePage}>
+      <div>{createElement(children, { setPage: setPage })}</div>
+      <footer id={s.pageNumber}>
+        <p>{page}</p>
+      </footer>
+    </div>
+  );
+}
 
 const TldrPage = ({ setPage }) => {
   return (
@@ -392,7 +404,7 @@ const ForFunPage = () => {
   );
 };
 
-export const portfolioPages = [
+export const portfolioPageContents = [
   TldrPage,
   IntroPage,
   EducationPage,
@@ -402,30 +414,3 @@ export const portfolioPages = [
   This,
   ForFunPage,
 ];
-
-export default function Zine(props) {
-  const { pages } = props;
-  const [page, setPage] = useState(0);
-  return (
-    <div id={s.zine}>
-      {createElement(pages[page], { setPage: setPage })}
-      <footer id={s.pageNumber}>
-        <p>{page}</p>
-      </footer>
-      <footer id={s.pageNav}>
-        <nav>
-          {page !== 0 && (
-            <button id={s.backwardButton} onClick={() => setPage(page - 1)}>
-              {"<-"}
-            </button>
-          )}
-          {page !== pages.length - 1 && (
-            <button id={s.forwardButton} onClick={() => setPage(page + 1)}>
-              {"->"}
-            </button>
-          )}
-        </nav>
-      </footer>
-    </div>
-  );
-}
