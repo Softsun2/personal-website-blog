@@ -1,5 +1,5 @@
 
-/* tldrPage */
+/*
 #tldrPage {
     display: flex;
     flex-direction: column;
@@ -35,7 +35,6 @@
     width: 500px;
 }
 
-/* introPage */
 #introPage {
     display: flex;
     flex-direction: column;
@@ -53,7 +52,6 @@
     max-width: 400px;
 }
 
-/* educationPage */
 #educationPage {
     display: flex;
     flex-direction: row;
@@ -73,7 +71,6 @@
     margin: 0;
 }
 
-/* Experience */
 #experiencePage h2 {
     padding-bottom: 50px;;
 }
@@ -104,7 +101,6 @@
     margin-left: 0;
 }
 
-/* projectsPage */
 
 #fibBSPViTodoPage h2 {
     margin-bottom: 50px;
@@ -125,7 +121,6 @@
     align-self: flex-end;
 }
 
-/* turiPage */
 #turiPage p {
     width: 400px;
 }
@@ -160,7 +155,6 @@
     padding-top: 50px;
 }
 
-/* thisPage */
 #thisPage {
     width: 400px;
 }
@@ -168,7 +162,6 @@
     padding-top: 50px;
 }
 
-/* forFunPage */
 #forFunPage .columns {
     display: flex;
     flex-direction: row;
@@ -177,3 +170,4 @@
 #forFunPage img {
     width: 300px;
 }
+*/

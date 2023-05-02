@@ -1,42 +1,43 @@
-import Page from "./Page";
 import { useState, createElement } from "react";
 import s from "./Zine.module.css";
 
-// Zine layouts
-export function TwoPageLayout(props) {
-  const { page, pages, setPage } = props;
-  const pageIndexes =
-    page === 0 || page === pages.length - 1 ? [page] : [page, page + 1];
-
+function Page(props) {
+  const { header, children, footer } = props;
   return (
-    <div id={s.twoPageZineLayout}>
-      {pageIndexes.map((pageIndex) => {
-        const className = pageIndex % 2 === 0 ? "rightPage" : "leftPage";
-        return <div className={s[className]}>{pages[pageIndex]}</div>;
-      })}
+    <div>
+      {header}
+      {children}
+      {footer}
     </div>
   );
 }
-export function SinglePageLayout(props) {
-  const { page, pages, setPage } = props;
-  return <div id={s.singlePageZineLayout}>{pages[page]}</div>;
-}
 
 export default function Zine(props) {
-  const { pageContents, layout } = props;
+  const {
+    pageContents, // jsx object - list of the page contents
+    layout, // jsx object - Zine layout component
+    spine, // img - an image used as the spine of the zine
+  } = props;
   const [page, setPage] = useState(0);
-  const pages = pageContents.map((content) => {
+
+  // header and footer should really be Zine parameters
+  const Footer = ({ page: page }) => {
     return (
-      // this is a bug, wrong page!
-      <Page page={page} setPage={setPage}>
-        {content}
+      <footer>
+        <p>{page}</p>
+      </footer>
+    );
+  };
+
+  const pages = pageContents.map((content, i) => {
+    // wrap contents with setPage
+    return (
+      <Page className={s.zineFooter} footer={<Footer page={i} />}>
+        {createElement(content, { setPage: setPage })}
       </Page>
     );
   });
 
-  return (
-    <div id={s.zine}>
-      {createElement(layout, { setPage: setPage, page: page, pages: pages })}
-    </div>
-  );
+  // render with provided layout
+  return createElement(layout, { setPage: setPage, page: page, pages: pages });
 }

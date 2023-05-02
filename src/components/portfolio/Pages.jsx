@@ -18,18 +18,6 @@ import turiGroup from "../../image/turi-group.JPG";
 import turiGif from "../../image/turi-gif.gif";
 import { getLastCommit } from "../../util/util";
 
-export default function Page(props) {
-  const { setPage, page, children } = props;
-  return (
-    <div className={s.zinePage}>
-      <div>{createElement(children, { setPage: setPage })}</div>
-      <footer id={s.pageNumber}>
-        <p>{page}</p>
-      </footer>
-    </div>
-  );
-}
-
 const TldrPage = ({ setPage }) => {
   return (
     <div id={s.tldrPage}>

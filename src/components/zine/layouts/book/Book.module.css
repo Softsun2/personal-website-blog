@@ -1,0 +1,13 @@
+#book {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Alegreya';
+    font-size: 16px;
+    margin: 1.4em;
+    justify-content: center;
+}
+
+#book .bookPage {
+    aspect-ratio: 148 / 210;    /* A5 Zine Aspect Ratio */
+    height: 80vh;
+}
