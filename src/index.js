@@ -30,7 +30,14 @@ const router = createBrowserRouter([
       <Header navPaths={navPaths} />,
       <Zine
         layout={Book}
-        pageContents={[portfolioPageContents[1], portfolioPageContents[1]]}
+        pageContents={[
+          portfolioPageContents[2],
+          portfolioPageContents[1],
+          portfolioPageContents[2],
+          portfolioPageContents[2],
+          portfolioPageContents[1],
+          portfolioPageContents[1],
+        ]}
       />
       // footer or somthing later
     ),
