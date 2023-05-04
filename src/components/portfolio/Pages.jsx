@@ -82,7 +82,7 @@ const IntroPage = () => {
   return (
     <div id={s.introPage}>
       <div id={s.meImages}>
-        <img id={s.me} src={terminalBrr} alt="me" />
+        <img id={s.me} src={me} alt="me" />
         <img id={s.terminalBrr} src={terminalBrr} alt="terminalBrr" />
       </div>
       <p>

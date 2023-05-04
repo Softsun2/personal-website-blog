@@ -1,11 +1,34 @@
-#educationPage img {
-    width: 200px
+
+:root {
+    font-family: 'Alegreya';
+    font-size: 16px;
+    line-height: 1em;
+    margin: 1.4em;
+    max-width: var(--max-width);
+}
+a {
+    color: black;
+    text-decoration: underline;
+}
+h2,
+h3,
+h4 {
+    font-weight: normal;
+}
+figcaption {
+    font-style: italic;
+    font-size: 10px;
+    line-height: 1em;
 }
 
-/*
+/* tldr page */
+/* TODO:
+    Name left margin
+ */
 #tldrPage {
     display: flex;
     flex-direction: column;
+    padding: 1.4em;
 }
 #tldrPage #header {
     display: flex;
@@ -18,6 +41,10 @@
 }
 #tldrPage .pageNavLink:hover {
     cursor: pointer;
+}
+#tldrPage p {
+    font-size: 14px;
+    text-align: end;
 }
 #tldrPage ul {
     padding-top: 50px;
@@ -32,6 +59,7 @@
 }
 #tldrPage figure {
     margin: 0;
+    margin-left: -1.4em;
 }
 #tldrPage img {
     padding-top: 50px;
@@ -173,4 +201,3 @@
 #forFunPage img {
     width: 300px;
 }
-*/

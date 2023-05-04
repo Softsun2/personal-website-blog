@@ -28,17 +28,7 @@ const router = createBrowserRouter([
     path: "/portfolio",
     element: composeComponents(
       <Header navPaths={navPaths} />,
-      <Zine
-        layout={Book}
-        pageContents={[
-          portfolioPageContents[2],
-          portfolioPageContents[1],
-          portfolioPageContents[2],
-          portfolioPageContents[2],
-          portfolioPageContents[1],
-          portfolioPageContents[1],
-        ]}
-      />
+      <Zine layout={Book} pageContents={portfolioPageContents} />
       // footer or somthing later
     ),
     errorElement: null,
