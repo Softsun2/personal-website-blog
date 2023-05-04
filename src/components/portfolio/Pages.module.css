@@ -10,9 +10,7 @@ a {
     color: black;
     text-decoration: underline;
 }
-h2,
-h3,
-h4 {
+h2, h3, h4 {
     font-weight: normal;
 }
 figcaption {
@@ -63,12 +61,14 @@ figcaption {
 }
 #tldrPage img {
     padding-top: 50px;
-    width: 500px;
+    max-width: 500px;
 }
 
+/* intro page */
 #introPage {
     display: flex;
     flex-direction: column;
+    padding: 1.4em;
 }
 #introPage #meImages {
     display: flex;
@@ -77,33 +77,45 @@ figcaption {
     gap: 5px;
 }
 #introPage #me {
-    max-width: 400px;
+    max-width: 300px;
+}
+#introPage #terminalBrr {
+    max-width: 200px;
 }
 #introPage p {
     max-width: 400px;
 }
 
+/*  education page */
 #educationPage {
     display: flex;
     flex-direction: row;
-    gap: 100px;
+    padding: 1.4em;
+    gap: 50px;
+}
+#educationPage h2 {
+    text-align: end;
 }
 #educationPage #campusImages {
     display: flex;
     flex-direction: column;
 }
 #educationPage p {
-    width: 400px;
+    max-width: 300px;
 }
 #educationPage img {
-    width: 300px;
+    max-width: 200px;
 }
 #educationPage figure {
     margin: 0;
 }
 
+/* experience page */
+#experiencePage {
+    padding: 1.4em;
+}
 #experiencePage h2 {
-    padding-bottom: 50px;;
+    padding-bottom: 50px;
 }
 #experiencePage h3 {
     margin: 0;
@@ -115,45 +127,57 @@ figcaption {
 #experiencePage #experiences {
     display: flex;
     flex-direction: row;
-    gap: 50px;
+    gap: 25px;
 }
 #experiencePage .experienceTitle {
     display: flex;
-    gap: 25px;
+    gap: 12.5px;
     align-items: baseline;
 }
 #experiencePage img {
-    width: 300px;
+    max-width: 225px;
 }
 #experiencePage aside {
-    padding-top: 50px;
+    padding-top: 25px;
+}
+#experiencePage p {
+    font-size: 14px;
 }
 #experiencePage figure {
     margin-left: 0;
 }
 
-
+/* yea */
+#fibBSPViTodoPage {
+    padding: 1.4em;
+}
 #fibBSPViTodoPage h2 {
-    margin-bottom: 50px;
+    text-align: end;
+    margin-bottom: 100px;
 }
 #fibBSPViTodoPage .fibBSPViTodoContent {
     display: flex;
     flex-direction: column;
 }
 #fibBSPViTodoPage img {
-    width: 80%;
+    max-width: 80%;
     align-self: flex-end;
 }
 #fibBSPViTodoPage h3 {
     align-self: flex-end;
 }
 #fibBSPViTodoPage p {
-    width: calc(var(--max-width)/2);
+    max-width: 350px;
+    font-size: 14px;
     align-self: flex-end;
 }
 
+#turiPage {
+    padding: 1.4em;
+}
 #turiPage p {
-    width: 400px;
+    font-size: 14px;
+    max-width: 350px;
 }
 #turiPage #turiCol {
     display: flex;
@@ -174,30 +198,37 @@ figcaption {
     gap: 20px;
 }
 #turiPage #turiGroup {
-    width: 400px;
+    max-width: 300px;
 }
 #turiPage #turiCar {
-    width: 200px;
+    max-width: 150px;
 }
 #turiPage #turiGif {
-    width: 200px
+    max-width: 150px;
 }
 #turiPage h3 {
     padding-top: 50px;
 }
 
 #thisPage {
-    width: 400px;
+    max-width: 400px;
+    padding: 1.4em;
 }
 #thisPage h3 {
     padding-top: 50px;
 }
 
+#forFunPage {
+    padding: 1.4em;
+}
+#forFunPage p {
+    font-size: 12px;
+}
 #forFunPage .columns {
     display: flex;
     flex-direction: row;
 }
 
 #forFunPage img {
-    width: 300px;
+    max-width: 150px;
 }
