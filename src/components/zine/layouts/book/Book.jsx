@@ -34,7 +34,6 @@ export default function Book(props) {
 
   useEffect(() => {
     const keyUp = (e) => {
-      console.log(e.code);
       if (e.code === "ArrowRight") {
         flipPage(true, page, pages.length, setPage);
       } else if (e.code === "ArrowLeft") {
@@ -43,7 +42,6 @@ export default function Book(props) {
     };
     document.addEventListener("keyup", keyUp);
     return () => {
-      console.log("removing keyup");
       document.removeEventListener("keyup", keyUp);
     };
   });

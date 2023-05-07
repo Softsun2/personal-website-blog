@@ -9,6 +9,7 @@ import { composeComponents } from "./util/util";
 
 import "./index.css";
 import Header from "./components/header/Header";
+import Welcome from "./components/welcome/Welcome";
 import Cmaebrea from "./components/cmaebrea/Cmaebrea";
 import Zine from "./components/zine/Zine";
 import Book from "./components/zine/layouts/book/Book";
@@ -21,12 +22,13 @@ const navPaths = ["/portfolio", "/cmaebrea"];
 const router = createBrowserRouter([
   {
     path: "/",
-    element: composeComponents(<Navigate to="/portfolio" />),
+    element: <Navigate to="/portfolio" />,
     errorElement: null,
   },
   {
     path: "/portfolio",
     element: composeComponents(
+      <Welcome />,
       <Header navPaths={navPaths} />,
       <Zine layout={Book} pageContents={portfolioPageContents} />
       // footer or somthing later
