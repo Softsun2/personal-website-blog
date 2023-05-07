@@ -57,6 +57,7 @@ figcaption {
 }
 #tldrPage figure {
     margin: 0;
+    max-width: 500px;
     margin-left: -1.4em;
 }
 #tldrPage img {

@@ -3,6 +3,7 @@
     flex-direction: row;
     font-family: 'Alegreya';
     font-size: 16px;
+    margin: 1.4em;
     justify-content: center;
 }
 
@@ -17,21 +18,25 @@
     position: relative;
 }
 #book .rightPage .pageFlipper {
-    z-index: 1;
     position: absolute;
     right: 0;
-    width: 100px;
+    width: 1.4em; 
     height: 80vh; 
+}
+#book .rightPage .pageFlipper:hover {
+    cursor: e-resize;
     background-color: black;
     opacity: 5%;
 }
 
 #book .leftPage .pageFlipper {
-    z-index: 1;
     position: absolute;
     left: 0;
-    width: 100px;
+    width: 1.4em; 
     height: 80vh;
+}
+#book .leftPage .pageFlipper:hover {
+    cursor: w-resize;
     background-color: black;
     opacity: 5%;
 }

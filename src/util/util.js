@@ -24,9 +24,7 @@ async function getLastCommit(owner, repo) {
     })
     .then((res) => {
       const commits = res.data;
-      return new Date(
-        commits[commits.length - 1].commit.committer.date
-      ).toDateString();
+      return new Date(commits[0].commit.committer.date).toDateString();
     });
 }
 
