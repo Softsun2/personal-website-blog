@@ -25,7 +25,7 @@ const TldrPage = ({ setPage }) => {
         <h2>Peyton Okubo</h2>
         <div>
           <p>
-            The condensed version of this shpeal is just my{" "}
+            The condensed version of this shpeal is my{" "}
             <a href="../../media/master-Peyton-Okubo.pdf">resume</a>.
           </p>
           <ul>
@@ -89,7 +89,7 @@ const IntroPage = () => {
       <p>
         My name is Peyton Okubo. This is where I'm informally displaying my
         human experience. Experience relevant to the community and industry I’m
-        eager to be a part of as a recent computer science graduate.
+        eager to be a part of.
       </p>
     </div>
   );
@@ -112,23 +112,25 @@ const EducationPage = () => {
         <p>
           I completed my computer science degree at the University of Minnesota
           Twin Cities in December 2022. I entered university with an undeclared
-          major and no prior programming experience. Though, I had grown up
-          using computers, a part of me lives within every machine I’ve ever
-          used. This prompted me to enroll in an introductory computer science
-          course. Immediately I was absorbed by the design, implementation, and
-          analytical principles associated with programming concepts. It clicked
-          with me, it was exciting; it still is. The satisfaction of completing
-          my first real coding binge was surreal.
+          major and no prior programming experience. Though, I grew up using
+          computers, a part of me lives within every machine I’ve operated.
+          Naturally, I was drawn to enroll in an introductory computer science
+          course. I quickly became absorbed by design, implementation, and
+          analytical concepts. It clicked with me, it was exciting; it still is.
+          The satisfaction of completing my first real coding binge was surreal.
         </p>
         <p>
-          Course content engulfed me as I fought to catch up to my more
-          experienced classmates. I took care in my studies and sought the
-          highest quality solutions I was capable of on assignments. Low-level
-          system architecture, functional programming concepts, software design
-          paradigms, and web development especially captivated me. These topics
-          inspired further independent learning, personal projects, and academic
-          involvement as a teacher’s assistant. Naturally, it became evident
-          that a career in software was for me.
+          I took care in my studies and sought the highest quality solutions I
+          was capable of. I was especially fond of low-level system
+          architecture, functional programming concepts, software design
+          paradigms, and web development. These topics inspired further
+          independent learning, personal projects, and academic involvement.
+        </p>
+        <p>
+          If not for my passion for computer science I would not have unfolded
+          as a person. I owe much of the development of my character to my
+          pursuits in academia. It’s important to me, to my personal
+          development, to follow a career in software.
         </p>
       </article>
     </div>
@@ -157,15 +159,21 @@ const ExperiencePage = () => {
           </figure>
           <p>
             Last June I joined a research project associated with the concept of
-            storing data on synthesized DNA. My team specifically was tasked
+            storing data on synthesized DNA. My team was specifically tasked
             with publishing an in-house DNA synthesis simulation. My role was to
-            develop a benchmarking program to gather hardware metrics to analyze
-            the simulation's performance (more importantly the multi-agent
-            routing algorithm’s performance). Using Python, Pandas, Gephi, a
-            handful of command-line tools, and multiprocessing I was able to
+            develop a{" "}
+            <a
+              href="https://github.com/Softsun2/DMFsim-benchmarking.git"
+              target="_blank"
+              rel="noreferrer"
+            >
+              benchmarking program
+            </a>{" "}
+            to gather hardware metrics to analyze the simulation's performance.
+            Using Python, Pandas, Gephi, and multiprocessing I was able to
             record over 150,000 data points. I presented this data to our team
-            lead and employees of the funding company and was then tasked with
-            authoring and revising the results section of the{" "}
+            lead and employees of the funding company. I also helped author and
+            revise the analytical section of the research paper.
             <a
               href="https://arxiv.org/abs/2211.15494v3"
               target="_blank"
@@ -183,35 +191,25 @@ const ExperiencePage = () => {
           </div>
           <p>
             Upon completing projects and assignments I enjoyed helping other
-            students on class discussion boards. It was easy to do so online,
-            where I could take time to type out thoughtful responses from behind
-            the cover of a screen. Especially coming from a position where I
-            once needed more help than other students when I began my computer
-            science studies. I understood what it was like to not pick up things
-            immediately and it sucks. I wanted to help those with who I was once
-            in the same position. At the same time, I was horridly anxious about
-            taking on a leadership role. I wanted to help other students and I
-            wanted to overcome social fears of mine.
+            students on class discussion boards. Especially coming from a
+            position where I once needed more help than other students. I wanted
+            to help those in a position I was once familiar with. At the same
+            time, I was horridly anxious to take on a leadership role.
           </p>
           <p>
             I TA’d an advanced programming principles class taught through the
-            lens of functional programming (in OCaml). I was intimidated at
-            first but my experience and desire to support my students made it
-            much less uncomfortable. Eventually, supervising labs of up to 30
-            students and seeing my office hours queue fill up felt natural.
-            Besides interacting with the students I developed a grading script
-            that automatically graded and student’s in class exercises and
+            lens of functional programming (in OCaml). This role was far beyond
+            my range of comfort but with patience and faith in my knowledge
+            eventually supervising labs holding office hours felt natural.
+          </p>
+          <p>
+            Besides directly interacting with students I developed a grading
+            script that automatically graded students in class exercises and
             emailed them their results using Python, PyGithub, Pandas, and
             Google Apps Script.
           </p>
         </div>
       </div>
-      <aside>
-        <p>
-          Having yet to apply my skills outside of academia I'm eager to xyz in
-          jobs xyz...
-        </p>
-      </aside>
     </div>
   );
 };
@@ -222,22 +220,23 @@ const FibBSPViTodo = () => {
       <h2>Projects</h2>
       <div className={s.fibBSPViTodoContent}>
         <h3>fibBSPViTodo</h3>
+        {/* TODO: Gif */}
         <img src={marion} alt="marion"></img>
         <p>
           VI-TODO is a take on the typical to-do web app. VI-TODO uses binary
           space partitioning in a Fibonacci layout to display tasks, similar to
-          layouts of common Unix window managers such as DWM, BSPWM, and I3. The
-          user can interact with the to-do tasks via basic Vi keymaps and
-          motions. Special commands are implemented to filter tasks based on
-          completion status. I was motivated to build this project to better
-          understand DOM manipulation and more complex layout strategies using
-          PUG, Javascript, ExpressJS, MYSQL, and CSS.
+          layouts of common Unix window managers such as DWM (my favorite!),
+          BSPWM, and I3. The user can interact with the to-do tasks via basic Vi
+          keymaps and motions. Special commands are implemented to filter tasks
+          based on completion status. I was motivated to build this project to
+          better understand DOM manipulation and more complex layout strategies
+          using PUG, Javascript, ExpressJS, MYSQL, and CSS.
         </p>
-        {/* interactive embed? Do this last... */}
       </div>
     </div>
   );
 };
+
 const Turi = () => {
   return (
     <div id={s.turiPage}>
@@ -252,16 +251,15 @@ const Turi = () => {
           <p>
             Last May I had the opportunity to take a mechatronics class abroad
             in Switzerland at the Zurich University of Applied Sciences. Teams
-            were tasked with constructing a line following robot. This was the
-            first time I experienced a cross-disciplinary team with mechanical
+            were tasked with constructing a line following robot. This was my
+            first time working with a cross-disciplinary team with mechanical
             engineers, computer engineers, and computer scientists. The aspect
             of designing software with hardware in mind was an engaging
             challenge. It was pleasant to develop code that took on a different
-            structure than what I had been used to seeing in my computer science
-            course. It took a few long nights but implementing custom sensor
-            drivers, a proportional control system, a complex state machine, and
-            obstacle avoidance were rewarding. I was proud that our robot came
-            in second place.
+            structure than those of typical computer science courses.
+            Implementing custom sensor drivers, a proportional control system
+            and obstacle avoidance was rewarding. I was proud that our robot
+            came in second place!
           </p>
           <div className={s.carImages}>
             <figure>
@@ -300,9 +298,9 @@ const This = () => {
       <p>
         With a growing interest in web development, I wanted to learn the widely
         used front-end framework React. The goal of this website was to both
-        display my experience as well as structuring a project around React. I’m
-        fond of the seamlessness of single-page applications and the flexibility
-        of components and interfaces.
+        display my experience as well as structuring a project around React.
+        I’ve enjoyed learning about the seamlessness of single-page
+        applications, the composability of components, and responsive design.
       </p>
       <p>Last commit: {lastCommit}</p>
     </div>

@@ -1,8 +1,7 @@
 #book {
     display: flex;
     flex-direction: row;
-    font-family: 'Alegreya';
-    font-size: 16px;
+    font-size: 1em;
     margin: 1.4em;
     justify-content: center;
 }
