@@ -2,7 +2,7 @@ import { useState, createElement } from "react";
 import s from "./Zine.module.css";
 import { classNames } from "../../util/util";
 
-function Page(props) {
+export function Page(props) {
   const { header, children, footer } = props;
   return (
     <div>
@@ -14,12 +14,19 @@ function Page(props) {
 }
 
 // TODO: header + footer should be zine properties
+// TODO: Abstract function?
+
 export default function Zine(props) {
   const {
     pageContents, // jsx object - list of the page contents
     layout, // jsx object - Zine layout component
   } = props;
-  const [page, setPage] = useState(0);
+
+  /* TODO:
+    Layouts require proprietary setPage logic.  Maybe zine properties
+    should be declared in layouts?
+  */
+  // const [page, setPage] = useState(0);
 
   // header and footer should really be Zine parameters
   const Footer = ({ page: page }) => {
@@ -31,19 +38,14 @@ export default function Zine(props) {
     );
   };
 
-  const pages = pageContents.map((content, i) => {
-    // wrap contents with setPage
-    return (
-      <Page footer={i > 0 ? <Footer page={i} /> : null}>
-        {createElement(content, { setPage: setPage })}
-      </Page>
-    );
-  });
-
   // render with provided layout
   return (
     <div id={s.zine}>
-      {createElement(layout, { setPage: setPage, page: page, pages: pages })}
+      {createElement(layout, {
+        pageContents: pageContents,
+        header: null,
+        footer: Footer,
+      })}
     </div>
   );
 }

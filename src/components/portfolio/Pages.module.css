@@ -45,6 +45,7 @@ figcaption {
 #insideFrontCover p {
     text-align: center;
     font-size: 0.8rem;
+    width: 66%;
 }
 #insideFrontCover .date {
     position: absolute;

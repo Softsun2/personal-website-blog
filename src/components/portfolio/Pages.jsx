@@ -37,6 +37,11 @@ const InsideFrontCover = () => {
     <div id={s.insideFrontCover}>
       <img src={star} alt="-t_*_i^" />
       <p id={s.tldr}>
+        My name is Peyton Okubo. This is where I'm informally displaying my
+        human experience. Experience relevant to the community and industry I’m
+        eager to be a part of.
+      </p>
+      <p>
         This "zine" condenses to my <a href="./">resume</a>.
       </p>
       <p className={s.date}>03/21/23</p>
@@ -180,7 +185,7 @@ const ExperiencePage = () => {
   );
 };
 
-const FibBSPViTodo = () => {
+const FibBSPViTodoPage = () => {
   return (
     <div id={s.fibBSPViTodoPage}>
       <h2>Projects</h2>
@@ -203,7 +208,7 @@ const FibBSPViTodo = () => {
   );
 };
 
-const Turi = () => {
+const TuriPage = () => {
   return (
     <div id={s.turiPage}>
       <h2>Projects</h2>
@@ -242,7 +247,7 @@ const Turi = () => {
     </div>
   );
 };
-const This = () => {
+const ThisPage = () => {
   const [lastCommit, setLastCommit] = useState(null);
   useEffect(() => {
     getLastCommit("softsun2", "personal-website-blog").then((res) =>
@@ -357,20 +362,53 @@ const ForFunPage = () => {
   );
 };
 
+const TableOfContents = ({ setPage: setPage }) => {
+  const pageOffset = 2; // table of contents page offset from zero
+  const pages = [
+    "Table Of Contents",
+    "Education",
+    "Experience",
+    "FibBSPViTodo",
+    "Turi",
+    "This",
+  ];
+
+  return (
+    <div id={s.tableofContentsPage}>
+      <h2>Table of Contents</h2>
+      <ul>
+        {pages.map((pageName, index) => {
+          return (
+            <li>
+              <span
+                onClick={() => setPage(index + pageOffset)}
+                className={s.pageNavLink}
+              >
+                {pageName}
+              </span>
+              <span>{index + pageOffset}</span>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  );
+};
+
 export const portfolioPageContents = [
   FrontCover,
 
   InsideFrontCover,
-  // TableOfContents,
+  TableOfContents,
 
   IntroPage,
   EducationPage,
 
   ExperiencePage,
-  FibBSPViTodo,
+  FibBSPViTodoPage,
 
-  Turi,
-  This,
+  TuriPage,
+  ThisPage,
 
   ForFunPage,
   // Contacts,

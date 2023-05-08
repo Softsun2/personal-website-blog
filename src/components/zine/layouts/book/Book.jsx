@@ -1,6 +1,9 @@
-import { useEffect } from "react";
+import { createElement, useEffect, useState } from "react";
 import { classNames } from "../../../../util/util";
+import { Page } from "../../Zine";
 import s from "./Book.module.css";
+
+// this can be drastically cleaned up, for now this layout is fine
 
 function flipPage(forward, page, pages, setPage) {
   function nextOdd(n) {
@@ -30,8 +33,25 @@ function flipPage(forward, page, pages, setPage) {
 }
 
 export default function Book(props) {
-  const { page, pages, setPage } = props;
+  const { pageContents, header, footer } = props;
+  const [page, setPage] = useState(0);
 
+  // book set page logic
+  function setBookPage(page) {
+    const bookPage = page !== 0 && page % 2 === 0 ? page - 1 : page;
+    setPage(bookPage);
+  }
+
+  // create pages from contents, header, and footer
+  const pages = pageContents.map((content, i) => {
+    return (
+      <Page footer={i > 0 ? createElement(footer, { page: i }) : null}>
+        {createElement(content, { setPage: setBookPage })}
+      </Page>
+    );
+  });
+
+  // page flip with arrow keys
   useEffect(() => {
     const keyUp = (e) => {
       if (e.code === "ArrowRight") {
