@@ -18,10 +18,10 @@
     src: url("./font/SuisseWorks-Regular.ttf");
 }
 
-@font-face {
+/* @font-face {
     font-family: Alegreya;
     src: url("./font/Alegreya-Regular.ttf");
-}
+} */
 
 body {
     font-family: 'Alegreya';

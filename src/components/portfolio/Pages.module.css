@@ -1,71 +1,61 @@
-
 :root {
-    font-size: 2vh;
-    line-height: 1em;
+    font-size: calc(0.5em + 1vmin);
+    line-height: calc(0.5em + 1vmin);
     margin: 1.4em;
-    max-width: var(--max-width);
+    position: relative;
 }
 a {
     color: black;
     text-decoration: underline;
+}
+a:hover {
+    cursor: pointer;
 }
 h2, h3, h4 {
     font-weight: normal;
 }
 figcaption {
     font-style: italic;
-    font-size: 10px;
-    line-height: 1em;
+    font-size: 0.5rem;
+    padding-left: 0.1rem;
+    line-height: 1rem;
 }
 
-/* tldr page */
-/* TODO:
-    Name left margin
- */
-#tldrPage {
-    display: flex;
-    flex-direction: column;
-    padding: 1.4em;
+#frontCover {
+    padding: 1.4rem;
 }
-#tldrPage #header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: baseline;
-}
-#tldrPage .pageNavLink {
-    text-decoration: underline;
-}
-#tldrPage .pageNavLink:hover {
-    cursor: pointer;
-}
-#tldrPage p {
-    max-width: 250px;
-    font-size: 0.7rem;
-    text-align: end;
-}
-#tldrPage ul {
-    padding-top: 2rem;
-    list-style-type: none;
-    text-align: end;
-}
-#tldrPage li {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    gap: 1em;
-}
-#tldrPage figure {
+#frontCover h2 {
     margin: 0;
-    max-width: 500px;
+}
+#frontCover figure {
+    margin: 0;
+    padding-top: 25%;
     margin-left: -1.4em;
 }
-#tldrPage img {
-    padding-top: 1rem;
-    width: 25rem;
+#frontCover img {
+    width: calc(100% + 1.4rem);
 }
 
-/* intro page */
+#insideFrontCover {
+    padding: 1.4em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#insideFrontCover p {
+    text-align: center;
+    font-size: 0.8rem;
+}
+#insideFrontCover .date {
+    position: absolute;
+    bottom: 15%;
+}
+#insideFrontCover img {
+    width: 50%;
+    padding-top: 20%;
+    padding-bottom: 1.4rem;
+}
+
 #introPage {
     display: flex;
     flex-direction: column;

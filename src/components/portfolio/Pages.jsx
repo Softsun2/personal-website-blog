@@ -1,9 +1,10 @@
-import { useState, useEffect, createElement } from "react";
+import { useState, useEffect } from "react";
 import s from "./Pages.module.css";
 import Modal from "../modal/Modal";
 
 // local images
 import marion from "../../image/20.jpg";
+import star from "../../image/star.png";
 
 import me from "../../image/me.JPG";
 import terminalBrr from "../../image/terminal-brr-gif.gif";
@@ -18,62 +19,27 @@ import turiGroup from "../../image/turi-group.JPG";
 import turiGif from "../../image/turi-gif.gif";
 import { getLastCommit } from "../../util/util";
 
-const TldrPage = ({ setPage }) => {
+const FrontCover = () => {
   return (
-    <div id={s.tldrPage}>
-      <div id={s.header}>
-        <h2>Peyton Okubo</h2>
-        <div>
-          <p>
-            The condensed version of this shpeal is my{" "}
-            <a href="../../media/master-Peyton-Okubo.pdf">resume</a>.
-          </p>
-          <ul>
-            <li>
-              <span onClick={() => setPage(0)} className={s.pageNavLink}>
-                Tldr
-              </span>
-              <span>0</span>
-            </li>
-            <li>
-              <span onClick={() => setPage(1)} className={s.pageNavLink}>
-                Intro
-              </span>
-              <span>1</span>
-            </li>
-            <li>
-              <span onClick={() => setPage(2)} className={s.pageNavLink}>
-                Education
-              </span>
-              <span>2</span>
-            </li>
-            <li>
-              <span onClick={() => setPage(3)} className={s.pageNavLink}>
-                Experience
-              </span>
-              <span>3</span>
-            </li>
-            <li>
-              <span onClick={() => setPage(4)} className={s.pageNavLink}>
-                Projects
-              </span>
-              <span>4</span>
-            </li>
-            <li>
-              <span onClick={() => setPage(5)} className={s.pageNavLink}>
-                For fun
-              </span>
-              <span>5</span>
-            </li>
-          </ul>
-        </div>
-      </div>
+    <div id={s.frontCover}>
+      <h2>Peyton Okubo</h2>
       <figure>
         <img src={marion} alt="cleary" />
         <figcaption>
           <i>Lake Marion, 2020</i>
         </figcaption>
       </figure>
+    </div>
+  );
+};
+const InsideFrontCover = () => {
+  return (
+    <div id={s.insideFrontCover}>
+      <img src={star} alt="-t_*_i^" />
+      <p id={s.tldr}>
+        This "zine" condenses to my <a href="./">resume</a>.
+      </p>
+      <p className={s.date}>03/21/23</p>
     </div>
   );
 };
@@ -392,12 +358,22 @@ const ForFunPage = () => {
 };
 
 export const portfolioPageContents = [
-  TldrPage,
+  FrontCover,
+
+  InsideFrontCover,
+  // TableOfContents,
+
   IntroPage,
   EducationPage,
+
   ExperiencePage,
   FibBSPViTodo,
+
   Turi,
   This,
+
   ForFunPage,
+  // Contacts,
+
+  // BackCover,
 ];
