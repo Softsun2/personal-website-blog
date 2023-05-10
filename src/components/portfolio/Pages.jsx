@@ -234,8 +234,7 @@ const ThisPage = () => {
   });
   return (
     <div id={s.thisPage}>
-      <h2>Projects</h2>
-      <h3>
+      <h2>
         <a
           href="https://github.com/Softsun2/personal-website-blog.git"
           target="_blank"
@@ -243,12 +242,12 @@ const ThisPage = () => {
         >
           This Website
         </a>
-      </h3>
+      </h2>
       <p>
-        With a growing interest in web development, I wanted to learn the widely
-        used front-end framework React. The goal of this website was to both
-        display my experience as well as structuring a project around React.
-        I’ve enjoyed learning about the seamlessness of single-page
+        With a growing interest in web development, I wanted to learn the
+        front-end framework React. The goal of this website is to display my
+        experience while becoming familiar with one of the most widely used
+        frameworks. I’ve enjoyed learning about seamless single-page
         applications, the composability of components, and responsive design.
       </p>
       <p>Last commit: {lastCommit}</p>
@@ -256,99 +255,72 @@ const ThisPage = () => {
   );
 };
 
-const ForFunPage = () => {
+const ContributionPage = () => {
   return (
-    <div id={s.forFunPage}>
-      <h2>For Fun</h2>
-      <div className={s.columns}>
-        <div className={s.media}>
-          <figure>
-            <img src={marion} alt="marion" />
-            <figcaption>marion</figcaption>
-          </figure>
-          <figure>
-            <img src={marion} alt="marion" />
-            <figcaption>marion</figcaption>
-          </figure>
-          <figure>
-            <img src={marion} alt="marion" />
-            <figcaption>marion</figcaption>
-          </figure>
-        </div>
-        <article>
-          <p>
-            I was drawn into the world of configuration and personalized
-            development environments by the text editor Vim. Building a
-            customized text editor with the minimum features to suit my needs
-            appealed to me. I like to know how my software works; I like to be
-            in control of how my software works. I like when my software does
-            exactly what it should and no more. There are considerable drawbacks
-            to minimizing/personalizing your development tools; using these
-            tools is a hobby of mine and I only do so when I can get away with
-            it. Working with lower-level applications has taught me much about
-            operating systems and command-line workflow. This led me down a
-            rabbit hole of configurability and reproducibility philosophies.
-          </p>
-          <h3>Themeing</h3>
-          <p>
-            I value uniformity and flexibility when it comes to design. I’ve
-            been casually theming my desktop environments for about a year now
-            and Flavours is the tool I use to do so. Flavours is a tool that
-            manages base16 color schemes across common Unix applications. Where
-            users can apply color scheme changes in real-time to their
-            configured apps via the command line.
-          </p>
-          <p>
-            Flavours was great but its implementation contradicted declarative
-            configuration philosophies that are conventional to most Unix
-            applications. Namely, configuring the program's set of color schemes
-            and templates had to be done imperatively and manually.
-          </p>
-          <p>
-            I took this opportunity to learn the basics of a new language (Rust)
-            and made my first open-source contribution. I added new fields to
-            the configuration file to declare the color scheme and template
-            sources and provided appropriate parsing, retrieving, and installing
-            of these sources. This made it so users could declare the sources of
-            their desired color schemes and templates in their configuration
-            file for Flavours and the sources would be installed automatically.
-          </p>
-          <p>
-            I use Flavours in tandem with an image filtering library (Image Go
-            Nord) to theme my desktop applications and wallpaper on the fly.
-          </p>
-          <h3>Vim</h3>
-          <p>
-            Currently, I’m building a Neovim configuration in Lua. Which has
-            taught me about language server protocols, language parsing, and
-            modular configuration principles.
-          </p>
-          <h3>Nix</h3>
-          <p>
-            I manage my systems configurations and packages with the Nix
-            ecosystem. Confusingly Nix is a package manager, language, and
-            operating system. Nix packages and Nix configurations are declared
-            in the pure functional language Nix. In short, this means one can
-            manage an entire system declaratively and reproducibly. Nix has its
-            quirks but it allows me to flexibly manage my systems and
-            development environments, it also does a wonderful job of preventing
-            dependency conflicts.
-          </p>
-        </article>
-      </div>
+    <div id={s.contributionPage}>
+      <h2>Flavours (Contributor)</h2>
+      <p>
+        I value uniformity and flexibility when it comes to design. I’ve been
+        casually theming my desktop environments for about a year now and{" "}
+        <a
+          href="https://github.com/Misterio77/flavours.git"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Flavours
+        </a>{" "}
+        is the tool I use to do so. Flavours is a tool that manages base16 color
+        schemes across common Unix applications. Where users can apply color
+        scheme changes in real-time to their configured apps via the command
+        line.
+      </p>
+      <p>
+        Flavours was great but its implementation contradicted declarative
+        configuration philosophies that are conventional to most Unix
+        applications. Namely, configuring the program's set of color schemes and
+        templates had to be done imperatively and manually.
+      </p>
+      <p>
+        I took this opportunity to learn the basics of Rust and made{" "}
+        <a
+          href="https://github.com/Misterio77/flavours/pull/62"
+          target="_blank"
+          rel="noreferrer"
+        >
+          my first open-source contribution
+        </a>{" "}
+        . I added new fields to the configuration file to declare the color
+        scheme and template sources and provided appropriate parsing,
+        retrieving, and installing of these sources. This made it so users could
+        declare the sources of their desired color schemes and templates in
+        their configuration file for Flavours and the sources would be installed
+        automatically.
+      </p>
+      <p>
+        I use Flavours in tandem with an{" "}
+        <a
+          href="https://ign.schrodinger-hat.it/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          image filtering library
+        </a>{" "}
+        to theme my desktop applications and wallpaper on the fly.
+      </p>
     </div>
   );
 };
 
 const TableOfContents = ({ setPage }) => {
-  const pageOffset = 2; // table of contents page offset from zero
+  const pageOffset = 3; // table of contents page offset from zero
   const pages = [
-    "Contents",
     "Education",
     "Experience",
     "FibBSPViTodo",
     "Turi",
     "This",
+    "Flavours",
+    "Contact (back cover)",
   ];
 
   return (
@@ -373,6 +345,24 @@ const TableOfContents = ({ setPage }) => {
   );
 };
 
+const Contact = () => {
+  return (
+    <div id={s.contactPage}>
+      <img src={star} alt="star"></img>
+      <p id={s.thanks}>
+        Thank you truly for discovering my tiny diy home on an island in the sea
+        of digital commotion. Allow me to discover you. Please reach out to me!
+      </p>
+      <div id={s.contactInfo}>
+        <p>Resume</p>
+        <p>612 860 9250</p>
+        <p>okubo012@umn.edu</p>
+        <p>Discord</p>
+      </div>
+    </div>
+  );
+};
+
 export const portfolioPageContents = [
   FrontCover,
 
@@ -386,8 +376,7 @@ export const portfolioPageContents = [
   TuriPage,
 
   ThisPage,
-  ForFunPage,
-  // Contacts,
+  ContributionPage,
 
-  // BackCover,
+  Contact, // back cover
 ];

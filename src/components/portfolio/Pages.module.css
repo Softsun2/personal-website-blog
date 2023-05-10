@@ -1,7 +1,7 @@
 :root {
     font-size: calc(0.5em + 1vmin);
     line-height: calc(0.25em + 1.25vmin);
-    margin: 1.4em;
+    margin: 1.4rem;
     position: relative;
 }
 a {
@@ -30,14 +30,14 @@ figcaption {
 #frontCover figure {
     margin: 0;
     padding-top: 25%;
-    margin-left: -1.4em;
+    margin-left: -1.4rem;
 }
 #frontCover img {
     width: calc(100% + 1.4rem);
 }
 
 #insideFrontCover {
-    padding: 1.4em;
+    padding: 1.4rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -112,8 +112,6 @@ figcaption {
 /* experience page */
 #experiencePage {
     padding: 1.4rem;
-    position: absolute;
-    bottom: 1.4rem;
 }
 #experiencePage h2 {
     text-align: center;
@@ -196,24 +194,40 @@ figcaption {
 
 
 #thisPage {
-    max-width: 400px;
-    padding: 1.4em;
+    width: 66%;
+    padding: 1.4rem;
 }
-#thisPage h3 {
-    padding-top: 50px;
+#thisPage h2 {
+    padding-top: calc(2 * 1.4rem);
 }
 
-#forFunPage {
-    padding: 1.4em;
+#contributionPage {
+    padding: 1.4rem;
+    font-size: 0.9rem;
 }
-#forFunPage p {
-    font-size: 12px;
+#contributionPage h2 {
+    text-align: end;
 }
-#forFunPage .columns {
+
+#contactPage {
+    padding: 1.4rem;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
 }
-
-#forFunPage img {
-    max-width: 150px;
+#contactPage img {
+    width: 50%;
+    padding-top: 20%;
+    padding-bottom: 1.4rem;
+}
+#contactPage #thanks {
+    text-align: center;
+    font-size: 0.8rem;
+    width: 66%;
+}
+#contactPage #contactInfo {
+    padding-top: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
