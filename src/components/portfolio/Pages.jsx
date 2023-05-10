@@ -49,23 +49,6 @@ const InsideFrontCover = () => {
   );
 };
 
-const IntroPage = () => {
-  return (
-    <div id={s.introPage}>
-      <h2>Intro</h2>
-      <div id={s.meImages}>
-        <img id={s.me} src={me} alt="me" />
-        <img id={s.terminalBrr} src={terminalBrr} alt="terminalBrr" />
-      </div>
-      <p>
-        My name is Peyton Okubo. This is where I'm informally displaying my
-        human experience. Experience relevant to the community and industry I’m
-        eager to be a part of.
-      </p>
-    </div>
-  );
-};
-
 const EducationPage = () => {
   return (
     <div id={s.educationPage}>
@@ -114,12 +97,8 @@ const ExperiencePage = () => {
       <h2>Experience</h2>
       <div id={s.experiences}>
         <div className={s.experience}>
-          <div className={s.experienceTitle}>
-            <h3>Reasearch Assistant</h3>
-            <h4>06/22 - 03/23</h4>
-          </div>
           <figure>
-            <img src={researchAssistant} alt="researchAssistant"></img>
+            <img src={researchAssistant} alt="researchAssistant" />
             <figcaption>
               Total Droplets vs. Max Congestion. This data was obtained by
               running the simulation at a constant grid size of 45 × 45 over a
@@ -128,57 +107,61 @@ const ExperiencePage = () => {
               approximately linear.
             </figcaption>
           </figure>
-          <p>
-            Last June I joined a research project associated with the concept of
-            storing data on synthesized DNA. My team was specifically tasked
-            with publishing an in-house DNA synthesis simulation. My role was to
-            develop a{" "}
-            <a
-              href="https://github.com/Softsun2/DMFsim-benchmarking.git"
-              target="_blank"
-              rel="noreferrer"
-            >
-              benchmarking program
-            </a>{" "}
-            to gather hardware metrics to analyze the simulation's performance.
-            Using Python, Pandas, Gephi, and multiprocessing I was able to
-            record over 150,000 data points. I presented this data to our team
-            lead and employees of the funding company. I also helped author and
-            revise the analytical section of the research paper.
-            <a
-              href="https://arxiv.org/abs/2211.15494v3"
-              target="_blank"
-              rel="noreferrer"
-            >
-              research paper
-            </a>
-            .
-          </p>
+          <h3>Research Assistant</h3>
+          <article>
+            <p>
+              Last June I joined a research project associated with the concept
+              of storing data on synthesized DNA. My team was specifically
+              tasked with publishing an in-house DNA synthesis simulation. My
+              role was to develop a{" "}
+              <a
+                href="https://github.com/Softsun2/DMFsim-benchmarking.git"
+                target="_blank"
+                rel="noreferrer"
+              >
+                benchmarking program
+              </a>{" "}
+              to gather hardware metrics to analyze the simulation's
+              performance. Using Python, Pandas, Gephi, and multiprocessing I
+              was able to record over 150,000 data points. I presented this data
+              to our team lead and employees of the funding company. I also
+              helped author and revise the analytical section of the{" "}
+              <a
+                href="https://arxiv.org/abs/2211.15494v3"
+                target="_blank"
+                rel="noreferrer"
+              >
+                research paper
+              </a>
+              .
+            </p>
+          </article>
         </div>
         <div className={s.experience}>
-          <div className={s.experienceTitle}>
-            <h3>Teacher's Assistant</h3>
-            <h4>08/21 - 12/21</h4>
-          </div>
-          <p>
-            Upon completing projects and assignments I enjoyed helping other
-            students on class discussion boards. Especially coming from a
-            position where I once needed more help than other students. I wanted
-            to help those in a position I was once familiar with. At the same
-            time, I was horridly anxious to take on a leadership role.
-          </p>
-          <p>
-            I TA’d an advanced programming principles class taught through the
-            lens of functional programming (in OCaml). This role was far beyond
-            my range of comfort but with patience and faith in my knowledge
-            eventually supervising labs holding office hours felt natural.
-          </p>
-          <p>
-            Besides directly interacting with students I developed a grading
-            script that automatically graded students in class exercises and
-            emailed them their results using Python, PyGithub, Pandas, and
-            Google Apps Script.
-          </p>
+          <h3>Teacher's Assistant</h3>
+          <article>
+            <p>
+              Upon completing projects and assignments I enjoyed helping other
+              students on class discussion boards. Especially coming from a
+              position where I once needed more help than other students. I
+              wanted to help those in a position I was once familiar with. At
+              the same time, I was horridly anxious to take on a leadership
+              role.
+            </p>
+            <p>
+              I TA’d an advanced programming principles class taught through the
+              lens of functional programming (in OCaml). This role was far
+              beyond my range of comfort but with patience and faith in my
+              knowledge eventually supervising labs holding office hours felt
+              natural.
+            </p>
+            <p>
+              Besides directly interacting with students I developed a grading
+              script that automatically graded students in class exercises and
+              emailed them their results using Python, PyGithub, Pandas, and
+              Google Apps Script.
+            </p>
+          </article>
         </div>
       </div>
     </div>
@@ -188,20 +171,19 @@ const ExperiencePage = () => {
 const FibBSPViTodoPage = () => {
   return (
     <div id={s.fibBSPViTodoPage}>
-      <h2>Projects</h2>
+      <h2>FibBSPViTodo</h2>
       <div className={s.fibBSPViTodoContent}>
-        <h3>fibBSPViTodo</h3>
-        {/* TODO: Gif */}
         <img src={marion} alt="marion"></img>
         <p>
-          VI-TODO is a take on the typical to-do web app. VI-TODO uses binary
-          space partitioning in a Fibonacci layout to display tasks, similar to
-          layouts of common Unix window managers such as DWM (my favorite!),
-          BSPWM, and I3. The user can interact with the to-do tasks via basic Vi
-          keymaps and motions. Special commands are implemented to filter tasks
-          based on completion status. I was motivated to build this project to
-          better understand DOM manipulation and more complex layout strategies
-          using PUG, Javascript, ExpressJS, MYSQL, and CSS.
+          FibBSPViTodo is a take (a verbose one) on the typical to-do web app.
+          FibBSPViTodo uses binary space partitioning in a Fibonacci layout to
+          display tasks, similar to layouts of common Unix window managers such
+          as DWM (my favorite!), BSPWM, and I3. The user can interact with the
+          to-do tasks via basic Vi keymaps and motions. Special commands are
+          implemented to filter tasks based on completion status. I was
+          motivated to build this project to better understand DOM manipulation
+          and more complex layout strategies using PUG, Javascript, ExpressJS,
+          MYSQL, and CSS.
         </p>
       </div>
     </div>
@@ -211,38 +193,34 @@ const FibBSPViTodoPage = () => {
 const TuriPage = () => {
   return (
     <div id={s.turiPage}>
-      <h2>Projects</h2>
-      <h3>Turi</h3>
-      <div id={s.turiCol}>
-        <figure>
-          <img id={s.turiGroup} src={turiGroup} alt="turiGroup" />
-          <figcaption>Competition Day (I'm in orange), 2022</figcaption>
-        </figure>
-        <div id={s.turiRow}>
-          <p>
-            Last May I had the opportunity to take a mechatronics class abroad
-            in Switzerland at the Zurich University of Applied Sciences. Teams
-            were tasked with constructing a line following robot. This was my
-            first time working with a cross-disciplinary team with mechanical
-            engineers, computer engineers, and computer scientists. The aspect
-            of designing software with hardware in mind was an engaging
-            challenge. It was pleasant to develop code that took on a different
-            structure than those of typical computer science courses.
-            Implementing custom sensor drivers, a proportional control system
-            and obstacle avoidance was rewarding. I was proud that our robot
-            came in second place!
-          </p>
-          <div className={s.carImages}>
-            <figure>
-              <img id={s.turiGif} src={turiGif} alt="turiGif" />
-              <figcaption>Early Iteration Software Demo</figcaption>
-            </figure>
-            <figure>
-              <img id={s.turiCar} src={turiCar} alt="turiCar" />
-              <figcaption>Final Robot Assembly</figcaption>
-            </figure>
-          </div>
+      <h2>Turi</h2>
+      <figure id={s.turiGroupFig}>
+        <img id={s.turiGroupImg} src={turiGroup} alt="turiGroup" />
+        <figcaption>Competition Day (I'm in orange), 2022</figcaption>
+      </figure>
+      <div id={s.turiContent}>
+        <div id={s.carImages}>
+          <figure>
+            <img id={s.turiGif} src={turiGif} alt="turiGif" />
+            <figcaption>Early Iteration Software Demo</figcaption>
+          </figure>
+          <figure>
+            <img id={s.turiCar} src={turiCar} alt="turiCar" />
+            <figcaption>Final Robot Assembly</figcaption>
+          </figure>
         </div>
+        <p>
+          Last May I had the opportunity to take a mechatronics class abroad in
+          Switzerland at the Zurich University of Applied Sciences. Teams were
+          tasked with constructing a line following robot. This was my first
+          time working with a cross-disciplinary team with mechanical engineers,
+          computer engineers, and computer scientists. The aspect of designing
+          software with hardware in mind was an engaging challenge. It was
+          pleasant to develop code that took on a different structure than those
+          of typical computer science courses. Implementing custom sensor
+          drivers, a proportional control system and obstacle avoidance was
+          rewarding. I was proud that our robot came in second place!
+        </p>
       </div>
     </div>
   );
@@ -362,10 +340,10 @@ const ForFunPage = () => {
   );
 };
 
-const TableOfContents = ({ setPage: setPage }) => {
+const TableOfContents = ({ setPage }) => {
   const pageOffset = 2; // table of contents page offset from zero
   const pages = [
-    "Table Of Contents",
+    "Contents",
     "Education",
     "Experience",
     "FibBSPViTodo",
@@ -374,8 +352,8 @@ const TableOfContents = ({ setPage: setPage }) => {
   ];
 
   return (
-    <div id={s.tableofContentsPage}>
-      <h2>Table of Contents</h2>
+    <div id={s.tableOfContentsPage}>
+      <h2>Contents</h2>
       <ul>
         {pages.map((pageName, index) => {
           return (
@@ -401,15 +379,13 @@ export const portfolioPageContents = [
   InsideFrontCover,
   TableOfContents,
 
-  IntroPage,
   EducationPage,
-
   ExperiencePage,
+
   FibBSPViTodoPage,
-
   TuriPage,
-  ThisPage,
 
+  ThisPage,
   ForFunPage,
   // Contacts,
 
