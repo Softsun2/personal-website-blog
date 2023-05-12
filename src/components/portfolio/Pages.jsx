@@ -1,19 +1,18 @@
 import { useState, useEffect } from "react";
 import s from "./Pages.module.css";
 import Modal from "../modal/Modal";
+import { classNames } from "../../util/util";
 
 // local images
-import marion from "../../image/20.jpg";
+import marion from "../../image/behind-cleary.jpg";
 import star from "../../image/star.png";
-
+import radarHouse from "../../image/radar-house.png";
 import me from "../../image/me.JPG";
 import terminalBrr from "../../image/terminal-brr-gif.gif";
-
 import campusDay from "../../image/campus-day.JPEG";
 import firstAssignment from "../../image/first-coding-assignment.JPEG";
-
 import researchAssistant from "../../image/research-graph.png";
-
+import fibBSPViTodoDemo from "../../image/fibBSPViTodo-demo.gif";
 import turiCar from "../../image/turi-car.jpg";
 import turiGroup from "../../image/turi-group.JPG";
 import turiGif from "../../image/turi-gif.gif";
@@ -24,7 +23,7 @@ const FrontCover = () => {
     <div id={s.frontCover}>
       <h2>Peyton Okubo</h2>
       <figure>
-        <img src={marion} alt="cleary" />
+        <img src={marion} alt="marion" />
         <figcaption>
           <i>Lake Marion, 2020</i>
         </figcaption>
@@ -42,13 +41,53 @@ const InsideFrontCover = () => {
         eager to be a part of.
       </p>
       <p>
-        This "zine" condenses to my <a href="./">resume</a>.
+        This "zine" condenses to my{" "}
+        <a
+          href="master-Peyton-Okubo.pdf"
+          target="_blank"
+          download="Peyton-Okubo-Resume"
+        >
+          resume
+        </a>
+        .
       </p>
       <p className={s.date}>03/21/23</p>
     </div>
   );
 };
+const TableOfContents = ({ setPage }) => {
+  const pageOffset = 3; // table of contents page offset from zero
+  const pages = [
+    "Education",
+    "Experience",
+    "FibBSPViTodo",
+    "Turi",
+    "This",
+    "Flavours",
+    "Contact",
+  ];
 
+  return (
+    <div id={s.tableOfContentsPage}>
+      <h2>Contents</h2>
+      <ul>
+        {pages.map((pageName, index) => {
+          return (
+            <li className={index === pages.length - 1 ? s.backCover : null}>
+              <span
+                onClick={() => setPage(index + pageOffset)}
+                className={s.pageNavLink}
+              >
+                {pageName}
+              </span>
+              <span>{index + pageOffset}</span>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  );
+};
 const EducationPage = () => {
   return (
     <div id={s.educationPage}>
@@ -90,7 +129,6 @@ const EducationPage = () => {
     </div>
   );
 };
-
 const ExperiencePage = () => {
   return (
     <div id={s.experiencePage}>
@@ -167,13 +205,20 @@ const ExperiencePage = () => {
     </div>
   );
 };
-
 const FibBSPViTodoPage = () => {
   return (
     <div id={s.fibBSPViTodoPage}>
-      <h2>FibBSPViTodo</h2>
+      <h2>
+        <a
+          href="https://github.com/Softsun2/fibBSPViTodo.git"
+          target="_blank"
+          rel="noreferrer"
+        >
+          FibBSPViTodo
+        </a>
+      </h2>
       <div className={s.fibBSPViTodoContent}>
-        <img src={marion} alt="marion"></img>
+        <img src={fibBSPViTodoDemo} alt="marion"></img>
         <p>
           FibBSPViTodo is a take (a verbose one) on the typical to-do web app.
           FibBSPViTodo uses binary space partitioning in a Fibonacci layout to
@@ -189,7 +234,6 @@ const FibBSPViTodoPage = () => {
     </div>
   );
 };
-
 const TuriPage = () => {
   return (
     <div id={s.turiPage}>
@@ -254,7 +298,6 @@ const ThisPage = () => {
     </div>
   );
 };
-
 const ContributionPage = () => {
   return (
     <div id={s.contributionPage}>
@@ -310,48 +353,13 @@ const ContributionPage = () => {
     </div>
   );
 };
-
-const TableOfContents = ({ setPage }) => {
-  const pageOffset = 3; // table of contents page offset from zero
-  const pages = [
-    "Education",
-    "Experience",
-    "FibBSPViTodo",
-    "Turi",
-    "This",
-    "Flavours",
-    "Contact (back cover)",
-  ];
-
-  return (
-    <div id={s.tableOfContentsPage}>
-      <h2>Contents</h2>
-      <ul>
-        {pages.map((pageName, index) => {
-          return (
-            <li>
-              <span
-                onClick={() => setPage(index + pageOffset)}
-                className={s.pageNavLink}
-              >
-                {pageName}
-              </span>
-              <span>{index + pageOffset}</span>
-            </li>
-          );
-        })}
-      </ul>
-    </div>
-  );
-};
-
 const Contact = () => {
   return (
     <div id={s.contactPage}>
-      <img src={star} alt="star"></img>
+      <img src={radarHouse} alt="radarHouse"></img>
       <p id={s.thanks}>
-        Thank you truly for discovering my tiny diy home on an island in the sea
-        of digital commotion. Allow me to discover you. Please reach out to me!
+        In a sea of digital commotion thank you for discovering my tiny diy
+        home. I'm receiving...
       </p>
       <div id={s.contactInfo}>
         <p>Resume</p>

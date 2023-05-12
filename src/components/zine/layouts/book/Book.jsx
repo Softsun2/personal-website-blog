@@ -45,7 +45,13 @@ export default function Book(props) {
   // create pages from contents, header, and footer
   const pages = pageContents.map((content, i) => {
     return (
-      <Page footer={i > 0 ? createElement(footer, { page: i }) : null}>
+      <Page
+        footer={
+          i !== 0 && i !== pageContents.length - 1
+            ? createElement(footer, { page: i })
+            : null
+        }
+      >
         {createElement(content, { setPage: setBookPage })}
       </Page>
     );
