@@ -10,6 +10,8 @@ import radarHouse from "../../image/radar-house.png";
 import me from "../../image/me.JPG";
 import terminalBrr from "../../image/terminal-brr-gif.gif";
 import campusDay from "../../image/campus-day.JPEG";
+import flavoursDemo from "../../image/flavours-demo.gif";
+import declareTemplate from "../../image/declare-template-demo.gif";
 import firstAssignment from "../../image/first-coding-assignment.JPEG";
 import researchAssistant from "../../image/research-graph.png";
 import fibBSPViTodoDemo from "../../image/fibBSPViTodo-demo.gif";
@@ -220,7 +222,7 @@ const FibBSPViTodoPage = () => {
       <div className={s.fibBSPViTodoContent}>
         <img src={fibBSPViTodoDemo} alt="marion"></img>
         <p>
-          FibBSPViTodo is a take (a verbose one) on the typical to-do web app.
+          FibBSPViTodo is a minimalist take on the typical to-do web app.
           FibBSPViTodo uses binary space partitioning in a Fibonacci layout to
           display tasks, similar to layouts of common Unix window managers such
           as DWM (my favorite!), BSPWM, and I3. The user can interact with the
@@ -257,13 +259,14 @@ const TuriPage = () => {
           Last May I had the opportunity to take a mechatronics class abroad in
           Switzerland at the Zurich University of Applied Sciences. Teams were
           tasked with constructing a line following robot. This was my first
-          time working with a cross-disciplinary team with mechanical engineers,
-          computer engineers, and computer scientists. The aspect of designing
-          software with hardware in mind was an engaging challenge. It was
-          pleasant to develop code that took on a different structure than those
-          of typical computer science courses. Implementing custom sensor
-          drivers, a proportional control system and obstacle avoidance was
-          rewarding. I was proud that our robot came in second place!
+          time working with a team consisting of mechanical engineers, computer
+          engineers, and computer scientists. Our team name was Turi, which is
+          slang for tourist in Swiss German. The aspect of designing software
+          with hardware in mind was an engaging challenge. It was pleasant to
+          develop code that took on a different structure than typical computer
+          science projects. Implementing custom sensor drivers, a proportional
+          control system and obstacle avoidance was rewarding. I was proud that
+          our robot came in second place!
         </p>
       </div>
     </div>
@@ -302,54 +305,64 @@ const ContributionPage = () => {
   return (
     <div id={s.contributionPage}>
       <h2>Flavours (Contributor)</h2>
-      <p>
-        I value uniformity and flexibility when it comes to design. I’ve been
-        casually theming my desktop environments for about a year now and{" "}
-        <a
-          href="https://github.com/Misterio77/flavours.git"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Flavours
-        </a>{" "}
-        is the tool I use to do so. Flavours is a tool that manages base16 color
-        schemes across common Unix applications. Where users can apply color
-        scheme changes in real-time to their configured apps via the command
-        line.
-      </p>
-      <p>
-        Flavours was great but its implementation contradicted declarative
-        configuration philosophies that are conventional to most Unix
-        applications. Namely, configuring the program's set of color schemes and
-        templates had to be done imperatively and manually.
-      </p>
-      <p>
-        I took this opportunity to learn the basics of Rust and made{" "}
-        <a
-          href="https://github.com/Misterio77/flavours/pull/62"
-          target="_blank"
-          rel="noreferrer"
-        >
-          my first open-source contribution
-        </a>{" "}
-        . I added new fields to the configuration file to declare the color
-        scheme and template sources and provided appropriate parsing,
-        retrieving, and installing of these sources. This made it so users could
-        declare the sources of their desired color schemes and templates in
-        their configuration file for Flavours and the sources would be installed
-        automatically.
-      </p>
-      <p>
-        I use Flavours in tandem with an{" "}
-        <a
-          href="https://ign.schrodinger-hat.it/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          image filtering library
-        </a>{" "}
-        to theme my desktop applications and wallpaper on the fly.
-      </p>
+      <figure id={s.declareDemo}>
+        <img src={declareTemplate} alt="declareTemplate"></img>
+        <figcaption>Declaring a custom template</figcaption>
+      </figure>
+      <article>
+        <p>
+          I value uniformity and flexibility when it comes to design. I’ve been
+          casually theming my desktop environments for about a year now and{" "}
+          <a
+            href="https://github.com/Misterio77/flavours.git"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Flavours
+          </a>{" "}
+          is the tool I use to do so. Flavours is a tool that manages base16
+          color schemes across common Unix applications. Where users can apply
+          color scheme changes in real-time to their configured apps via the
+          command line.
+        </p>
+        <p>
+          Flavours was great but its implementation contradicted declarative
+          configuration philosophies that are conventional to many Unix
+          applications. Namely, configuring the program's set of color schemes
+          and templates had to be done imperatively and manually.
+        </p>
+        <p>
+          I took this opportunity to learn the basics of Rust and made{" "}
+          <a
+            href="https://github.com/Misterio77/flavours/pull/62"
+            target="_blank"
+            rel="noreferrer"
+          >
+            my first open-source contribution
+          </a>
+          . I added new fields to the configuration file to declare the color
+          scheme and template sources and provided appropriate parsing,
+          retrieving, and installing of these sources. This made it so users
+          could declare the sources of their desired color schemes and templates
+          in their configuration file for Flavours and the sources would be
+          installed automatically.
+        </p>
+        <p>
+          I use Flavours in tandem with an{" "}
+          <a
+            href="https://ign.schrodinger-hat.it/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            image filtering library
+          </a>{" "}
+          to theme my desktop applications and wallpaper on the fly.
+        </p>
+        <figure id={s.desktopDemo}>
+          <img src={flavoursDemo} alt="flavoursDemo"></img>
+          <figcaption>Previewing desktop themes</figcaption>
+        </figure>
+      </article>
     </div>
   );
 };

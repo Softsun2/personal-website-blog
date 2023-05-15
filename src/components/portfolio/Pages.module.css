@@ -1,234 +1,254 @@
 :root {
-    font-size: calc(0.5em + 1vmin);
-    line-height: calc(0.25em + 1.25vmin);
-    margin: 1.4rem;
-    position: relative;
+  font-size: calc(0.5em + 1vmin);
+  line-height: calc(0.25em + 1.25vmin);
+  margin: 1.4rem;
+  position: relative;
 }
 a {
-    color: black;
-    text-decoration: underline;
+  color: black;
+  text-decoration: underline;
 }
 a:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
-h2, h3, h4 {
-    font-weight: normal;
+h2,
+h3,
+h4 {
+  font-weight: normal;
 }
 figcaption {
-    font-style: italic;
-    font-size: 0.5rem;
-    padding-left: 0.1rem;
-    line-height: calc(0.1em + 1vmin);
+  font-style: italic;
+  font-size: 0.5rem;
+  padding-left: 0.1rem;
+  line-height: calc(0.1em + 1vmin);
 }
 
 #frontCover {
-    padding: 1.4rem;
+  padding: 1.4rem;
 }
 #frontCover h2 {
-    margin: 0;
+  margin: 0;
 }
 #frontCover figure {
-    margin: 0;
-    padding-top: 30%;
-    margin-left: -1.4rem;
+  margin: 0;
+  padding-top: 30%;
+  margin-left: -1.4rem;
 }
 #frontCover img {
-    width: calc(100% + 1.4rem);
+  width: calc(100% + 1.4rem);
 }
 
 #insideFrontCover {
-    padding: 1.4rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 #insideFrontCover p {
-    text-align: center;
-    font-size: 0.8rem;
-    width: 66%;
+  text-align: center;
+  font-size: 0.8rem;
+  width: 66%;
 }
 #insideFrontCover .date {
-    position: absolute;
-    bottom: 15%;
+  position: absolute;
+  bottom: 15%;
 }
 #insideFrontCover img {
-    width: 50%;
-    padding-top: 20%;
-    padding-bottom: 1.4rem;
+  width: 50%;
+  padding-top: 20%;
+  padding-bottom: 1.4rem;
 }
 
 #tableOfContentsPage {
-    position: absolute;
-    width: calc(100% - 2 * 1.4rem);
-    height: calc(100% - 2 * 1.4rem);
-    padding: 1.4rem;
-    display: flex;
-    flex-direction: column;
-    align-items: end;
+  position: absolute;
+  width: calc(100% - 2 * 1.4rem);
+  height: calc(100% - 2 * 1.4rem);
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
 }
 #tableOfContentsPage ul {
-    list-style-type: none;
-    text-align: end;
+  list-style-type: none;
+  text-align: end;
 }
 #tableOfContentsPage li {
-    font-size: 0.9rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    gap: 1rem;
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 1rem;
 }
 #tableOfContentsPage .pageNavLink {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 #tableOfContentsPage .pageNavLink:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 #tableOfContentsPage .backCover {
-    font-style: italic;
-    padding-top: 1.4rem;
+  font-style: italic;
+  padding-top: 1.4rem;
 }
 
 #educationPage {
-    display: flex;
-    flex-direction: row;
-    padding: 1.4rem;
-    gap: 1.4rem;
+  display: flex;
+  flex-direction: row;
+  padding: 1.4rem;
+  gap: 1.4rem;
 }
 #educationPage #campusImages {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 #educationPage p {
-    width: 100%;
-    font-size: 0.8rem;
+  width: 100%;
+  font-size: 0.8rem;
 }
 #educationPage img {
-    width: 100%;
+  width: 100%;
 }
 #educationPage figure {
-    margin: 0;
+  margin: 0;
 }
 
 /* experience page */
 #experiencePage {
-    padding: 1.4rem;
-}
-#experiencePage h2 {
-    text-align: center;
+  padding: 1.4rem;
 }
 #experiencePage #experiences {
-    column-count: 2;
-    column-gap: 1.4rem;
+  column-count: 2;
+  column-gap: 1.4rem;
 }
 #experiencePage figure {
-    margin-top: 0;
-    margin-left: 0;
-    margin-right: 1.4rem;
-    margin-bottom: 1.4rem;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 1.4rem;
+  margin-bottom: 1.4rem;
 }
 #experiencePage figcaption {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 #experiencePage img {
-    width: 100%;
+  width: 100%;
 }
 #experiencePage p {
-    font-size: 0.8rem;
+  font-size: 0.8rem;
 }
 
 #fibBSPViTodoPage {
-    position: absolute;
-    padding: 1.4rem;
-    bottom: calc(1.4rem);
+  position: absolute;
+  padding: 1.4rem;
+  bottom: calc(2 * 1.4rem);
 }
 #fibBSPViTodoPage .fibBSPViTodoContent {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 #fibBSPViTodoPage img {
-    width: 85%;
+  aspect-ratio: 3456 / 2234; /* My desktop aspect ratio */
+  width: 85%;
 }
 #fibBSPViTodoPage p {
-    width: 66%;
-    font-size: 0.8rem;
+  width: 66%;
+  font-size: 0.8rem;
 }
 
 #turiPage {
-    padding: 1.4rem;
-    display: flex;
-    flex-direction: column;
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
 }
 #turiPage h2 {
-    text-align: end;
+  text-align: end;
 }
 #turiPage #turiGroupFig {
-    align-self: end;
-    margin: 0;
-    width: 66%;
+  align-self: end;
+  margin: 0;
+  width: 66%;
 }
 #turiPage #turiGroupFig img {
-    width: 100%;
+  width: 100%;
 }
-#turiPage #turiContent{
-    display: flex;
-    flex-direction: row;
-    gap: 1.4rem;
+#turiPage #turiContent {
+  display: flex;
+  flex-direction: row;
+  gap: 1.4rem;
 }
 #turiPage #turiContent p {
-    font-size: 0.8rem;
-    width: 70%;
+  font-size: 0.8rem;
+  width: 70%;
 }
 #turiPage #carImages {
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-    gap: 0;
-    margin-top: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  gap: 0.25rem;
+  margin-top: 1.4rem;
 }
 #turiPage #carImages figure {
-    margin: 0;
+  margin: 0;
 }
 #turiPage #carImages img {
-    width: 100%;
+  width: 100%;
 }
-
 
 #thisPage {
-    width: 66%;
-    padding: 1.4rem;
-    font-size: 0.8rem;
+  width: 66%;
+  padding: 1.4rem;
+  font-size: 0.8rem;
 }
 #thisPage h2 {
-    padding-top: calc(2 * 1.4rem);
+  padding-top: calc(2 * 1.4rem);
 }
 
 #contributionPage {
-    padding: 1.4rem;
-    font-size: 0.8rem;
+  padding: 1.4rem;
+  font-size: 0.7rem;
 }
 #contributionPage h2 {
-    text-align: end;
+  text-align: end;
+}
+#contributionPage article {
+  column-count: 2;
+  column-gap: 1.4rem;
+}
+#contributionPage p {
+  margin-top: 0;
+}
+#contributionPage figure {
+  margin: 0;
+}
+#contributionPage #declareDemo {
+  margin-bottom: 1.4rem;
+  display: block;
+  margin-left: auto;
+}
+#contributionPage #desktopDemo img {
+  aspect-ratio: 3456 / 2234; /* My desktop aspect ratio */
+}
+#contributionPage img {
+  width: 100%;
 }
 
 #contactPage {
-    padding: 1.4rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 #contactPage img {
-    width: 66%;
-    padding-top: 10%;
-    padding-bottom: 1.4rem;
+  width: 66%;
+  padding-top: 10%;
+  padding-bottom: 1.4rem;
 }
 #contactPage #thanks {
-    text-align: center;
-    font-size: 0.8rem;
-    width: 66%;
+  text-align: center;
+  font-size: 0.8rem;
+  width: 66%;
 }
 #contactPage #contactInfo {
-    padding-top: 5%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  padding-top: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
