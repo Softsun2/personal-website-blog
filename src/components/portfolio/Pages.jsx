@@ -307,7 +307,7 @@ const ContributionPage = () => {
       <h2>Flavours (Contributor)</h2>
       <figure id={s.declareDemo}>
         <img src={declareTemplate} alt="declareTemplate"></img>
-        <figcaption>Declaring a custom template</figcaption>
+        <figcaption>Declaring and using a custom template source</figcaption>
       </figure>
       <article>
         <p>
