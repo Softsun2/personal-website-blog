@@ -18,6 +18,7 @@ import fibBSPViTodoDemo from "../../image/fibBSPViTodo-demo.gif";
 import turiCar from "../../image/turi-car.jpg";
 import turiGroup from "../../image/turi-group.JPG";
 import turiGif from "../../image/turi-gif.gif";
+import githubLogo from "../../image/github-logo.png";
 import { getLastCommit } from "../../util/util";
 
 const FrontCover = () => {
@@ -369,17 +370,45 @@ const ContributionPage = () => {
 const Contact = () => {
   return (
     <div id={s.contactPage}>
-      <img src={radarHouse} alt="radarHouse"></img>
+      <img id={s.radarHouse} src={radarHouse} alt="radarHouse"></img>
       <p id={s.thanks}>
         In a sea of digital commotion thank you for discovering my tiny diy
         home. I'm receiving...
       </p>
-      <div id={s.contactInfo}>
-        <p>Resume</p>
-        <p>612 860 9250</p>
-        <p>okubo012@umn.edu</p>
-        <p>Discord</p>
-      </div>
+      <ul id={s.contactInfo}>
+        <li>
+          <a
+            href="master-Peyton-Okubo.pdf"
+            target="_blank"
+            download="Peyton-Okubo-Resume"
+          >
+            Resume
+          </a>
+        </li>
+        <li>
+          <a
+            href="mailto:okubo.peyton@gmail.com"
+            target="_blank"
+            rel="noreferrer"
+          >
+            okubo.peyton@gmail.com
+          </a>
+        </li>
+        <li>
+          <a href="tel:5128609250" target="_blank" rel="noreferrer">
+            612 860 9250
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://github.com/Softsun2"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img id={s.githubLogo} src={githubLogo} alt="githubLogo"></img>
+          </a>
+        </li>
+      </ul>
     </div>
   );
 };

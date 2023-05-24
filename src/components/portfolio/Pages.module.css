@@ -203,7 +203,7 @@ figcaption {
 
 #contributionPage {
   padding: 1.4rem;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
 }
 #contributionPage h2 {
   text-align: end;
@@ -214,6 +214,7 @@ figcaption {
 }
 #contributionPage p {
   margin-top: 0;
+  font-size: 0.7rem;
 }
 #contributionPage figure {
   margin: 0;
@@ -236,7 +237,7 @@ figcaption {
   flex-direction: column;
   align-items: center;
 }
-#contactPage img {
+#contactPage #radarHouse {
   width: 66%;
   padding-top: 10%;
   padding-bottom: 1.4rem;
@@ -247,8 +248,17 @@ figcaption {
   width: 66%;
 }
 #contactPage #contactInfo {
+  margin: 0;
+  padding: 0;
   padding-top: 5%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  list-style-type: none;
+  text-align: center;
+}
+#contactPage li {
+  margin: calc(0.5 * 1.4rem);
+}
+#contactPage #githubLogo {
+  width: calc(2 * 1.4rem);
+  padding-top: 10%;
+  padding-bottom: 1.4rem;
 }

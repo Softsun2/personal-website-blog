@@ -13,7 +13,7 @@ Learning React
 -   Go through todo's
 -   Finish readme
 -   Modal images
--   Contact page
+-   [x] Contact page
 -   Responsive styling that actually works
 -   Welcome cookie event
 -   Cmaebrea
