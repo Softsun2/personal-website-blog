@@ -22,6 +22,9 @@ figcaption {
   padding-left: 0.1rem;
   line-height: calc(0.1em + 1vmin);
 }
+img {
+  cursor: pointer;
+}
 
 #frontCover {
   padding: 1.4rem;
@@ -34,12 +37,13 @@ figcaption {
   padding-top: 30%;
   margin-left: -1.4rem;
 }
-#frontCover img {
+#frontCover #marion {
   width: calc(100% + 1.4rem);
 }
 
 #insideFrontCover {
   padding: 1.4rem;
+  padding-top: calc(20% + 1.4rem);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -53,9 +57,10 @@ figcaption {
   position: absolute;
   bottom: 15%;
 }
-#insideFrontCover img {
+#insideFrontCover #star {
+  display: block;
+  margin: auto;
   width: 50%;
-  padding-top: 20%;
   padding-bottom: 1.4rem;
 }
 
@@ -104,7 +109,10 @@ figcaption {
   width: 100%;
   font-size: 0.8rem;
 }
-#educationPage img {
+#educationPage #campusDay {
+  width: 100%;
+}
+#educationPage #firstAssignment {
   width: 100%;
 }
 #educationPage figure {
@@ -128,7 +136,7 @@ figcaption {
 #experiencePage figcaption {
   margin-bottom: 0;
 }
-#experiencePage img {
+#experiencePage #researchAssistant {
   width: 100%;
 }
 #experiencePage p {
@@ -144,7 +152,7 @@ figcaption {
   display: flex;
   flex-direction: column;
 }
-#fibBSPViTodoPage img {
+#fibBSPViTodoPage #fibBSPViTodoDemo {
   aspect-ratio: 3456 / 2234; /* My desktop aspect ratio */
   width: 85%;
 }
@@ -166,7 +174,7 @@ figcaption {
   margin: 0;
   width: 66%;
 }
-#turiPage #turiGroupFig img {
+#turiPage #turiGroupImg {
   width: 100%;
 }
 #turiPage #turiContent {
@@ -188,7 +196,10 @@ figcaption {
 #turiPage #carImages figure {
   margin: 0;
 }
-#turiPage #carImages img {
+#turiPage #carImages #turiGif {
+  width: 100%;
+}
+#turiPage #carImages #turiCar {
   width: 100%;
 }
 
@@ -224,22 +235,25 @@ figcaption {
   display: block;
   margin-left: auto;
 }
-#contributionPage #desktopDemo img {
-  aspect-ratio: 3456 / 2234; /* My desktop aspect ratio */
-}
-#contributionPage img {
+#contributionPage #declareTemplate {
   width: 100%;
+}
+#contributionPage #desktopDemo {
+  width: 100%;
+  aspect-ratio: 3456 / 2234; /* My desktop aspect ratio */
 }
 
 #contactPage {
   padding: 1.4rem;
+  padding-top: calc(1.4rem + 10%);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 #contactPage #radarHouse {
+  display: block;
+  margin: auto;
   width: 66%;
-  padding-top: 10%;
   padding-bottom: 1.4rem;
 }
 #contactPage #thanks {

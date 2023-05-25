@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import s from "./Pages.module.css";
-import Modal from "../modal/Modal";
+import ImageModal from "../imageModal/ImageModal";
 import { classNames } from "../../util/util";
 
 // local images
@@ -26,10 +26,8 @@ const FrontCover = () => {
     <div id={s.frontCover}>
       <h2>Peyton Okubo</h2>
       <figure>
-        <img src={marion} alt="marion" />
-        <figcaption>
-          <i>Lake Marion, 2020</i>
-        </figcaption>
+        <ImageModal id={s.marion} src={marion} alt="marion" />
+        <figcaption>Lake Marion, 2020</figcaption>
       </figure>
     </div>
   );
@@ -37,7 +35,7 @@ const FrontCover = () => {
 const InsideFrontCover = () => {
   return (
     <div id={s.insideFrontCover}>
-      <img src={star} alt="-t_*_i^" />
+      <ImageModal id={s.star} src={star} alt="-t_*_i^" />
       <p id={s.tldr}>
         My name is Peyton Okubo. This is where I'm informally displaying my
         human experience. Experience relevant to the community and industry I’m
@@ -96,10 +94,14 @@ const EducationPage = () => {
     <div id={s.educationPage}>
       <div id={s.campusImages}>
         <figure>
-          <img src={campusDay} alt="campusDay" />
+          <ImageModal id={s.campusDay} src={campusDay} alt="campusDay" />
         </figure>
         <figure>
-          <img src={firstAssignment} alt="firstAssignment" />
+          <ImageModal
+            id={s.firstAssignment}
+            src={firstAssignment}
+            alt="firstAssignment"
+          />
           <figcaption>First Coding Assignment, 2020</figcaption>
         </figure>
       </div>
@@ -139,7 +141,11 @@ const ExperiencePage = () => {
       <div id={s.experiences}>
         <div className={s.experience}>
           <figure>
-            <img src={researchAssistant} alt="researchAssistant" />
+            <ImageModal
+              id={s.researchAssistant}
+              src={researchAssistant}
+              alt="researchAssistant"
+            />
             <figcaption>
               Total Droplets vs. Max Congestion. This data was obtained by
               running the simulation at a constant grid size of 45 × 45 over a
@@ -221,7 +227,11 @@ const FibBSPViTodoPage = () => {
         </a>
       </h2>
       <div className={s.fibBSPViTodoContent}>
-        <img src={fibBSPViTodoDemo} alt="marion"></img>
+        <ImageModal
+          id={s.fibBSPViTodoDemo}
+          src={fibBSPViTodoDemo}
+          alt="fibBSPViTodoDemo"
+        />
         <p>
           FibBSPViTodo is a minimalist take on the typical to-do web app.
           FibBSPViTodo uses binary space partitioning in a Fibonacci layout to
@@ -242,17 +252,17 @@ const TuriPage = () => {
     <div id={s.turiPage}>
       <h2>Turi</h2>
       <figure id={s.turiGroupFig}>
-        <img id={s.turiGroupImg} src={turiGroup} alt="turiGroup" />
+        <ImageModal id={s.turiGroupImg} src={turiGroup} alt="turiGroup" />
         <figcaption>Competition Day (I'm in orange), 2022</figcaption>
       </figure>
       <div id={s.turiContent}>
         <div id={s.carImages}>
           <figure>
-            <img id={s.turiGif} src={turiGif} alt="turiGif" />
+            <ImageModal id={s.turiGif} src={turiGif} alt="turiGif" />
             <figcaption>Early Iteration Software Demo</figcaption>
           </figure>
           <figure>
-            <img id={s.turiCar} src={turiCar} alt="turiCar" />
+            <ImageModal id={s.turiCar} src={turiCar} alt="turiCar" />
             <figcaption>Final Robot Assembly</figcaption>
           </figure>
         </div>
@@ -307,7 +317,11 @@ const ContributionPage = () => {
     <div id={s.contributionPage}>
       <h2>Flavours (Contributor)</h2>
       <figure id={s.declareDemo}>
-        <img src={declareTemplate} alt="declareTemplate"></img>
+        <ImageModal
+          id={s.declareTemplate}
+          src={declareTemplate}
+          alt="declareTemplate"
+        />
         <figcaption>Declaring and using a custom template source</figcaption>
       </figure>
       <article>
@@ -359,8 +373,12 @@ const ContributionPage = () => {
           </a>{" "}
           to theme my desktop applications and wallpaper on the fly.
         </p>
-        <figure id={s.desktopDemo}>
-          <img src={flavoursDemo} alt="flavoursDemo"></img>
+        <figure id={s.desktopDemoFig}>
+          <ImageModal
+            id={s.desktopDemo}
+            src={flavoursDemo}
+            alt="flavoursDemo"
+          />
           <figcaption>Previewing desktop themes</figcaption>
         </figure>
       </article>
@@ -370,7 +388,7 @@ const ContributionPage = () => {
 const Contact = () => {
   return (
     <div id={s.contactPage}>
-      <img id={s.radarHouse} src={radarHouse} alt="radarHouse"></img>
+      <ImageModal id={s.radarHouse} src={radarHouse} alt="radarHouse" />
       <p id={s.thanks}>
         In a sea of digital commotion thank you for discovering my tiny diy
         home. I'm receiving...
