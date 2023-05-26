@@ -47,6 +47,10 @@ Is there a functional implementation of state? Regardless the concept is simple 
 
 I worry that the functions/event handlers to apply state changes with this `stateAccessor` will be forwarded to an unreasonable depth.
 
+## Ref
+
+The `useRef` hook allows you to **persist** values between renders. It can be used to store a mutable value that **does not cause a re-render** when updated.
+
 ## Routing (react-router-dom)
 
 This is confusing to me coming from server side routing. What does client side routing even mean? How does this work? Is really only the DOM being manipulated? What is happening under the hood?
@@ -61,11 +65,11 @@ Client side routing allows your app to update the url without making another req
 
 `createBrowserRouter` creates a router initialized with a list of router objects. A router object has the following keys:
 
-- `path`: the url path
-- `element`: the jsx to be rendered
-- `errorElement`: the jsx rendered on an error/exception
-- `loader`: a function a (async) function that loads the data necessary to render the component
-- `children`: a list of route objects that inherit the parent's layout. This requires that the parent element specifies where to render the child route with the `<Outlet />` tag.
+-   `path`: the url path
+-   `element`: the jsx to be rendered
+-   `errorElement`: the jsx rendered on an error/exception
+-   `loader`: a function a (async) function that loads the data necessary to render the component
+-   `children`: a list of route objects that inherit the parent's layout. This requires that the parent element specifies where to render the child route with the `<Outlet />` tag.
 
 See project for structure.
 
@@ -84,7 +88,3 @@ Some components require data to render. A `loader` may be declared for a route. 
 ### Data writes and HTML forms
 
 More React abstraction, under-the-hood magic. React emulates making requests to a server using client side-routing and sends them to a route `action`.
-
-#### Using the `Form` tag (instead of `form`)
-
-bruh

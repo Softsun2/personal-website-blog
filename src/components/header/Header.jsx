@@ -4,7 +4,7 @@ import name from "../../image/NAME.png";
 import { classNames } from "../../util/util";
 
 export default function Header(props) {
-  const paths = props.navPaths;
+  const { navPaths } = props;
   return (
     <div className={s.header}>
       <header>
@@ -14,7 +14,7 @@ export default function Header(props) {
           </Link>
         </h1>
         <nav className={s.rootNav}>
-          {paths.map((path) => (
+          {navPaths.map((path) => (
             <NavLink
               to={path}
               className={({ isActive }) => {

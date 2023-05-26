@@ -276,3 +276,6 @@ img {
   padding-top: 10%;
   padding-bottom: 1.4rem;
 }
+#contactPage #githubLogo:hover {
+  filter: opacity(0.75);
+}

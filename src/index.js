@@ -11,10 +11,7 @@ import "./index.css";
 import Header from "./components/header/Header";
 import Welcome from "./components/welcome/Welcome";
 import Cmaebrea from "./components/cmaebrea/Cmaebrea";
-import Zine from "./components/zine/Zine";
-import Book from "./components/zine/layouts/book/Book";
-import SinglePage from "./components/zine/layouts/singlePage/SinglePage";
-import { portfolioPageContents } from "./components/portfolio/Pages";
+import Portfolio from "./components/portfolio/Portfolio";
 
 /* paths that should be rendered in the nav */
 const navPaths = ["/portfolio", "/cmaebrea"];
@@ -30,18 +27,13 @@ const router = createBrowserRouter([
     element: composeComponents(
       <Welcome />,
       <Header navPaths={navPaths} />,
-      <Zine layout={Book} pageContents={portfolioPageContents} />
-      // footer or somthing later
+      <Portfolio />
     ),
     errorElement: null,
   },
   {
     path: "/cmaebrea",
-    element: composeComponents(
-      <Header navPaths={navPaths} />,
-      <Cmaebrea />
-      // footer or somthing later
-    ),
+    element: composeComponents(<Header navPaths={navPaths} />, <Cmaebrea />),
     errorElement: null,
   },
 ]);

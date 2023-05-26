@@ -10,10 +10,13 @@ Learning React
 
 ## Todo
 
--   Go through todo's
--   Finish readme
--   Modal images
+-   [ ] Mobile layout
+-   [ ] Welcome cookie event
+-   [ ] Cmaebrea
+-   [ ] Domain & Hosting
+
+-   [ ] Go through todo's
+-   [ ] Finish readme
+-   [X] Modal images
 -   [x] Contact page
--   Responsive styling that actually works
--   Welcome cookie event
--   Cmaebrea
+-   [ ] Responsive styling that actually works

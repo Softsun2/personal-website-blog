@@ -24,6 +24,7 @@
   max-height: 80%;
   max-width: 80%;
   cursor: default;
+  filter: none;
 }
 .modalBackdrop {
   background-color: rgba(0, 0, 0, 0.15);
