@@ -1,6 +1,5 @@
-import { useState, createElement } from "react";
 import s from "./Zine.module.css";
-import { classNames } from "../../util/util";
+import { createElement } from "react";
 
 export function Page(props) {
   const { header, children, footer } = props;
@@ -13,38 +12,23 @@ export function Page(props) {
   );
 }
 
-// TODO: header + footer should be zine properties
-// TODO: Abstract function?
-
 export default function Zine(props) {
-  const {
-    pageContents, // jsx object - list of the page contents
-    layout, // jsx object - Zine layout component
-  } = props;
+  const { header, pageContents, footer, layout, navigatePage } = props;
 
-  /* TODO:
-    Layouts require proprietary setPage logic.  Maybe zine properties
-    should be declared in layouts?
-  */
-  // const [page, setPage] = useState(0);
-
-  // header and footer should really be Zine parameters
-  const Footer = ({ page: page }) => {
-    const className = page % 2 === 0 ? "rightPage" : "leftPage";
+  const getPage = (i) => {
     return (
-      <footer className={classNames(s.zineFooter, s[className])}>
-        <p>{page}</p>
-      </footer>
+      <Page header={header} footer={footer}>
+        {createElement(pageContents[i], { navigatePage: navigatePage })}
+      </Page>
     );
   };
 
-  // render with provided layout
   return (
     <div id={s.zine}>
       {createElement(layout, {
-        pageContents: pageContents,
-        header: null,
-        footer: Footer,
+        getPage: getPage,
+        navigatePage: navigatePage,
+        length: pageContents.length,
       })}
     </div>
   );

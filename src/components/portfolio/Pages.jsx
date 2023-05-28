@@ -56,7 +56,7 @@ const InsideFrontCover = () => {
     </div>
   );
 };
-const TableOfContents = ({ setPage }) => {
+const TableOfContents = ({ navigatePage }) => {
   const pageOffset = 3; // table of contents page offset from zero
   const pages = [
     "Education",
@@ -72,16 +72,16 @@ const TableOfContents = ({ setPage }) => {
     <div id={s.tableOfContentsPage}>
       <h2>Contents</h2>
       <ul>
-        {pages.map((pageName, index) => {
+        {pages.map((pageName, i) => {
           return (
-            <li className={index === pages.length - 1 ? s.backCover : null}>
+            <li className={i === pages.length - 1 ? s.backCover : null}>
               <span
-                onClick={() => setPage(index + pageOffset)}
+                onClick={() => navigatePage(i + pageOffset)}
                 className={s.pageNavLink}
               >
                 {pageName}
               </span>
-              <span>{index + pageOffset}</span>
+              <span>{i + pageOffset}</span>
             </li>
           );
         })}

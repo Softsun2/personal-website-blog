@@ -2,6 +2,7 @@ import { createElement, useEffect, useState } from "react";
 import { classNames } from "../../../../util/util";
 import { Page } from "../../Zine";
 import s from "./Book.module.css";
+import { useNavigate } from "react-router-dom";
 
 // this can be drastically cleaned up, for now this layout is fine
 
@@ -35,6 +36,7 @@ function flipPage(forward, page, pages, setPage) {
 export default function Book(props) {
   const { pageContents, header, footer } = props;
   const [page, setPage] = useState(0);
+  const navigate = useNavigate();
 
   // book set page logic
   function setBookPage(page) {
@@ -62,6 +64,7 @@ export default function Book(props) {
     const keyUp = (e) => {
       if (e.code === "ArrowRight") {
         flipPage(true, page, pages.length, setPage);
+        navigate(`/portfolio/${page + 1}`);
       } else if (e.code === "ArrowLeft") {
         flipPage(false, page, pages.length, setPage);
       }

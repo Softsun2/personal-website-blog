@@ -14,9 +14,11 @@ Learning React
 -   [ ] Welcome cookie event
 -   [ ] Cmaebrea
 -   [ ] Domain & Hosting
-
 -   [ ] Go through todo's
 -   [ ] Finish readme
--   [X] Modal images
+-   [ ] Page state using url
+-   [x] Modal images
 -   [x] Contact page
 -   [ ] Responsive styling that actually works
+    -   When switching layout's state is lost
+    -   Routing should include page number?

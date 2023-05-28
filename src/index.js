@@ -19,11 +19,16 @@ const navPaths = ["/portfolio", "/cmaebrea"];
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Navigate to="/portfolio" />,
+    element: <Navigate to="/portfolio/0" />,
     errorElement: null,
   },
   {
     path: "/portfolio",
+    element: <Navigate to="/portfolio/0" />,
+    errorElement: null,
+  },
+  {
+    path: "/portfolio/:page",
     element: composeComponents(
       <Welcome />,
       <Header navPaths={navPaths} />,
@@ -32,7 +37,7 @@ const router = createBrowserRouter([
     errorElement: null,
   },
   {
-    path: "/cmaebrea",
+    path: "/cmaebrea/:page",
     element: composeComponents(<Header navPaths={navPaths} />, <Cmaebrea />),
     errorElement: null,
   },
