@@ -5,7 +5,7 @@ import s from "./Portfolio.module.css";
 import { portfolioPageContents } from "./Pages";
 import { useEffect, useState } from "react";
 import { classNames } from "../../util/util";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 export default function Portfolio() {
   const navigate = useNavigate();
@@ -36,8 +36,8 @@ export default function Portfolio() {
     );
   };
 
-  const navigatePage = (page) => {
-    navigate(`/portfolio/${page}`);
+  const navigatePage = (pageIndex) => {
+    navigate(`/portfolio/${pageIndex}`);
   };
 
   return (

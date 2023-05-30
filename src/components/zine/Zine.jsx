@@ -1,5 +1,6 @@
 import s from "./Zine.module.css";
 import { createElement } from "react";
+import { useParams } from "react-router-dom";
 
 export function Page(props) {
   const { header, children, footer } = props;
@@ -14,6 +15,12 @@ export function Page(props) {
 
 export default function Zine(props) {
   const { header, pageContents, footer, layout, navigatePage } = props;
+
+  const pageIndex = parseInt(useParams().pageIndex);
+
+  if (!(pageIndex >= 0 && pageIndex < pageContents.length)) {
+    throw new Response("Not Found", { status: 404 });
+  }
 
   const getPage = (i) => {
     return (

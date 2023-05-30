@@ -4,6 +4,7 @@ import {
   createBrowserRouter,
   Navigate,
   RouterProvider,
+  useRouteError,
 } from "react-router-dom";
 import { composeComponents } from "./util/util";
 
@@ -12,6 +13,7 @@ import Header from "./components/header/Header";
 import Welcome from "./components/welcome/Welcome";
 import Cmaebrea from "./components/cmaebrea/Cmaebrea";
 import Portfolio from "./components/portfolio/Portfolio";
+import NotFound from "./components/notFound/NotFound";
 
 /* paths that should be rendered in the nav */
 const navPaths = ["/portfolio", "/cmaebrea"];
@@ -20,12 +22,12 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Navigate to="/portfolio/0" />,
-    errorElement: null,
+    errorElement: <NotFound />,
   },
   {
     path: "/portfolio",
     element: <Navigate to="/portfolio/0" />,
-    errorElement: null,
+    errorElement: <NotFound />,
   },
   {
     path: "/portfolio/:pageIndex",
@@ -34,12 +36,12 @@ const router = createBrowserRouter([
       <Header navPaths={navPaths} />,
       <Portfolio />
     ),
-    errorElement: null,
+    errorElement: <NotFound />,
   },
   {
     path: "/cmaebrea/:page",
     element: composeComponents(<Header navPaths={navPaths} />, <Cmaebrea />),
-    errorElement: null,
+    errorElement: <NotFound />,
   },
 ]);
 
