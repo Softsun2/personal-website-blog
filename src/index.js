@@ -39,6 +39,11 @@ const router = createBrowserRouter([
     errorElement: <NotFound />,
   },
   {
+    path: "/cmaebrea",
+    element: <Navigate to="/cmaebrea/0" />,
+    errorElement: <NotFound />,
+  },
+  {
     path: "/cmaebrea/:page",
     element: composeComponents(<Header navPaths={navPaths} />, <Cmaebrea />),
     errorElement: <NotFound />,

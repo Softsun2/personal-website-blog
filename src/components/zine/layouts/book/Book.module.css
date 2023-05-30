@@ -1,8 +1,8 @@
 #bookLayout {
   display: flex;
   flex-direction: row;
-  font-size: 1em;
-  margin: 1.4em;
+  font-size: 1rem;
+  margin: 1.4rem;
   justify-content: center;
 }
 
@@ -21,7 +21,7 @@
 #bookLayout .rightPage .pageFlipper {
   position: absolute;
   right: 0;
-  width: 1.4em;
+  width: 1.4rem;
   height: 80vh;
 }
 #bookLayout .rightPage .pageFlipper:hover {
@@ -33,7 +33,7 @@
 #bookLayout .leftPage .pageFlipper {
   position: absolute;
   left: 0;
-  width: 1.4em;
+  width: 1.4rem;
   height: 80vh;
 }
 #bookLayout .leftPage .pageFlipper:hover {

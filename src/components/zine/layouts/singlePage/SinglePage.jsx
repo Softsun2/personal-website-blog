@@ -28,5 +28,21 @@ export default function SinglePage(props) {
     };
   });
 
-  return <div id={s.singlePageZineLayout}>{getPage(pageIndex)}</div>;
+  return (
+    <div id={s.singlePageLayout}>
+      {pageIndex > 0 && (
+        <div
+          onClick={() => flipPage(false)}
+          className={s.leftPageFlipper}
+        ></div>
+      )}
+      {pageIndex < length && (
+        <div
+          onClick={() => flipPage(true)}
+          className={s.rightPageFlipper}
+        ></div>
+      )}
+      <div className={s.page}>{getPage(pageIndex)}</div>
+    </div>
+  );
 }

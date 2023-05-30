@@ -1,0 +1,38 @@
+#singlePageLayout {
+  font-size: 1rem;
+  margin: 1.4rem;
+}
+
+#singlePageLayout .page {
+  position: relative;
+  aspect-ratio: 148 / 210; /* A5 Zine Aspect Ratio */
+  height: 80vh;
+  box-shadow: 0 0 50px rgb(0 0 0 / 0.2);
+}
+#singlePageLayout .leftPageFlipper,
+#singlePageLayout .rightPageFlipper {
+  z-index: 1;
+}
+#singlePageLayout .leftPageFlipper {
+  position: absolute;
+  left: 0;
+  width: 1.4em;
+  height: 80vh;
+}
+#singlePageLayout .leftPageFlipper:hover {
+  cursor: w-resize;
+  background-color: black;
+  opacity: 5%;
+}
+
+#singlePageLayout .rightPageFlipper {
+  position: absolute;
+  right: 0;
+  width: 1.4em;
+  height: 80vh;
+}
+#singlePageLayout .rightPageFlipper:hover {
+  cursor: e-resize;
+  background-color: black;
+  opacity: 5%;
+}
