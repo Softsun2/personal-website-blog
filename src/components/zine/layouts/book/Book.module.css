@@ -1,43 +1,43 @@
-#book {
-    display: flex;
-    flex-direction: row;
-    font-size: 1em;
-    margin: 1.4em;
-    justify-content: center;
+#bookLayout {
+  display: flex;
+  flex-direction: row;
+  font-size: 1em;
+  margin: 1.4em;
+  justify-content: center;
 }
 
-#book .bookPage {
-    aspect-ratio: 148 / 210;    /* A5 Zine Aspect Ratio */
-    height: 80vh;
-    box-shadow: 0 0 50px rgb(0 0 0 / 0.2);
+#bookLayout .bookPage {
+  aspect-ratio: 148 / 210; /* A5 Zine Aspect Ratio */
+  height: 80vh;
+  box-shadow: 0 0 50px rgb(0 0 0 / 0.2);
 }
-#book .rightPage,
-#book .leftPage {
-    position: relative;
+#bookLayout .rightPage,
+#bookLayout .leftPage {
+  position: relative;
 }
-#book .pageFlipper {
-    z-index: 1;
+#bookLayout .pageFlipper {
+  z-index: 1;
 }
-#book .rightPage .pageFlipper {
-    position: absolute;
-    right: 0;
-    width: 1.4em; 
-    height: 80vh; 
+#bookLayout .rightPage .pageFlipper {
+  position: absolute;
+  right: 0;
+  width: 1.4em;
+  height: 80vh;
 }
-#book .rightPage .pageFlipper:hover {
-    cursor: e-resize;
-    background-color: black;
-    opacity: 5%;
+#bookLayout .rightPage .pageFlipper:hover {
+  cursor: e-resize;
+  background-color: black;
+  opacity: 5%;
 }
 
-#book .leftPage .pageFlipper {
-    position: absolute;
-    left: 0;
-    width: 1.4em; 
-    height: 80vh;
+#bookLayout .leftPage .pageFlipper {
+  position: absolute;
+  left: 0;
+  width: 1.4em;
+  height: 80vh;
 }
-#book .leftPage .pageFlipper:hover {
-    cursor: w-resize;
-    background-color: black;
-    opacity: 5%;
+#bookLayout .leftPage .pageFlipper:hover {
+  cursor: w-resize;
+  background-color: black;
+  opacity: 5%;
 }

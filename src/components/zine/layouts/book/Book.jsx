@@ -1,72 +1,52 @@
-import { createElement, useEffect, useState } from "react";
+import { createElement, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import { classNames } from "../../../../util/util";
-import { Page } from "../../Zine";
 import s from "./Book.module.css";
-import { useNavigate } from "react-router-dom";
 
-// this can be drastically cleaned up, for now this layout is fine
-
-function flipPage(forward, page, pages, setPage) {
-  function nextOdd(n) {
-    return n % 2 === 0 ? n + 1 : n + 2;
-  }
-  function lastOdd(n) {
-    return n % 2 === 0 ? n - 1 : n - 2;
-  }
-  function lastEven(n) {
-    return n % 2 === 1 ? n - 1 : n - 2;
-  }
-
-  let newPage = -1;
-  if (forward) {
-    newPage = nextOdd(page);
-  } else {
-    if (page <= 2) {
-      newPage = lastEven(page);
-    } else {
-      newPage = lastOdd(page);
-    }
-  }
-
-  if (0 <= newPage && newPage < pages) {
-    setPage(newPage);
-  }
-}
+const BookPage = (props) => {
+  const { page, leftPage, flipPage } = props;
+  const className = leftPage ? "leftPage" : "rightPage";
+  const clickToFlipPage = leftPage
+    ? () => flipPage(false)
+    : () => flipPage(true);
+  return (
+    <div className={classNames(s.bookPage, s[className])}>
+      <div onClick={clickToFlipPage} className={s.pageFlipper}></div>
+      {page}
+    </div>
+  );
+};
 
 export default function Book(props) {
-  const { pageContents, header, footer } = props;
-  const [page, setPage] = useState(0);
-  const navigate = useNavigate();
+  const { getPage, navigatePage, length } = props;
+  let pageIndex = parseInt(useParams().pageIndex);
 
-  // book set page logic
-  function setBookPage(page) {
-    const bookPage = page !== 0 && page % 2 === 0 ? page - 1 : page;
-    setPage(bookPage);
+  if (pageIndex >= length) {
+    /* throw a 404 not found */
+  }
+  if (pageIndex > 0) {
+    /* TODO: consider rerouting to normalized pageIndex if even */
+    pageIndex = 2 * Math.round(pageIndex / 2) - 1; /* round down to odd */
   }
 
-  // create pages from contents, header, and footer
-  const pages = pageContents.map((content, i) => {
-    return (
-      <Page
-        footer={
-          i !== 0 && i !== pageContents.length - 1
-            ? createElement(footer, { page: i })
-            : null
-        }
-      >
-        {createElement(content, { setPage: setBookPage })}
-      </Page>
-    );
-  });
+  const flipPage = (forward) => {
+    const nextOdd = (n) => (n % 2 === 0 ? n + 1 : n + 2);
+    const lastOdd = (n) => (n % 2 === 0 ? n - 1 : n - 2);
+    if (forward && pageIndex < length - 1) {
+      navigatePage(nextOdd(pageIndex));
+    } else if (!forward && pageIndex > 1) {
+      navigatePage(lastOdd(pageIndex));
+    } else if (!forward && pageIndex === 1) {
+      navigatePage(pageIndex - 1);
+    }
+  };
 
-  // page flip with arrow keys
   useEffect(() => {
     const keyUp = (e) => {
       if (e.code === "ArrowRight") {
-        flipPage(true, page, pages.length, setPage);
-        navigate(`/portfolio/${page + 1}`);
+        flipPage(true);
       } else if (e.code === "ArrowLeft") {
-        flipPage(false, page, pages.length, setPage);
+        flipPage(false);
       }
     };
     document.addEventListener("keyup", keyUp);
@@ -75,28 +55,29 @@ export default function Book(props) {
     };
   });
 
-  const pageIndexes =
-    page === 0 || page === pages.length - 1 ? [page] : [page, page + 1];
+  const isCover = pageIndex === 0 || pageIndex === length - 1;
 
   return (
-    <div id={s.book}>
-      {pageIndexes.map((pageIndex) => {
-        const className = pageIndex % 2 === 0 ? "rightPage" : "leftPage";
-        // responsible for book like page flipping behavior
-        const clickToFlipPage = () => {
-          if (className === "rightPage") {
-            flipPage(true, pageIndex, pages.length, setPage);
-          } else {
-            flipPage(false, pageIndex, pages.length, setPage);
-          }
-        };
-        return (
-          <div className={classNames(s.bookPage, s[className])}>
-            <div onClick={clickToFlipPage} className={s.pageFlipper}></div>
-            {pages[pageIndex]}
-          </div>
-        );
-      })}
+    <div id={s.bookLayout}>
+      {isCover && (
+        <BookPage
+          page={getPage(pageIndex)}
+          leftPage={pageIndex % 2 !== 0}
+          flipPage={flipPage}
+        />
+      )}
+      {!isCover && [
+        <BookPage
+          page={getPage(pageIndex)}
+          leftPage={true}
+          flipPage={flipPage}
+        />,
+        <BookPage
+          page={getPage(pageIndex + 1)}
+          leftPage={false}
+          flipPage={flipPage}
+        />,
+      ]}
     </div>
   );
 }

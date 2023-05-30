@@ -28,7 +28,7 @@ const router = createBrowserRouter([
     errorElement: null,
   },
   {
-    path: "/portfolio/:page",
+    path: "/portfolio/:pageIndex",
     element: composeComponents(
       <Welcome />,
       <Header navPaths={navPaths} />,
