@@ -11,7 +11,7 @@ export default function Portfolio() {
   const navigate = useNavigate();
   const zineAspectRatio = 210 / 148;
   const [layout, setLayout] = useState(
-    aspectRatio >= zineAspectRatio ? () => Book : () => SinglePage
+    aspectRatio() >= zineAspectRatio ? () => Book : () => SinglePage
   );
 
   useEffect(() => {
