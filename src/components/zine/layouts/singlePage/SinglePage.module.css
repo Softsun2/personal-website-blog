@@ -1,6 +1,7 @@
 #singlePageLayout {
   font-size: 1rem;
-  margin: 1.4rem;
+  margin: auto;
+  width: 50%;
 }
 
 #singlePageLayout .page {

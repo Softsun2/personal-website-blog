@@ -1,5 +1,9 @@
 import { Octokit } from "octokit";
 
+function aspectRatio() {
+  return window.innerWidth / window.innerHeight;
+}
+
 // formats a list of class names for CSS
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -47,4 +51,11 @@ function getCookie(name) {
   });
   return cookies[name];
 }
-export { classNames, composeComponents, getLastCommit, setCookie, getCookie };
+export {
+  classNames,
+  composeComponents,
+  getLastCommit,
+  setCookie,
+  getCookie,
+  aspectRatio,
+};
