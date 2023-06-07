@@ -10,9 +10,12 @@ Learning React
 
 ## Todo
 
--   [ ] Mobile layout
 -   [ ] Responsive styling that actually works
--   [ ] Refactor for better performance, component code is being re-ran when it probably shouldn't be.
+    -   [ ] Nothing should ever be cut off the screen
+    -   [ ] Nothing should require scrolling
+    -   [ ] Switching layouts feels natural and desired
+    -   [ ] Font, images, etc... scales linearly with aspect ratio
+-   [ ] Refactor for better performance, component code is being re-ran when it probably shouldn't be. It's slow on mobile.
 -   [ ] Welcome cookie event
     -   [x] Cookie event
     -   [ ] Styling
@@ -26,4 +29,5 @@ Learning React
 -   [ ] Finish readme
 -   [x] Page state using url
 -   [x] Modal images
+-   [x] Contact page
 -   [x] Contact page
