@@ -11,13 +11,19 @@ Learning React
 ## Todo
 
 -   [ ] Mobile layout
+-   [ ] Responsive styling that actually works
+-   [ ] Refactor for better performance, component code is being re-ran when it probably shouldn't be.
 -   [ ] Welcome cookie event
+    -   [x] Cookie event
+    -   [ ] Styling
+    -   [ ] Modal?
+-   [ ] Handle 404 not found for dynamic routes
+    -   [x] Fire error component
+    -   [ ] Style error component
 -   [ ] Cmaebrea
--   [ ] Domain & Hosting
+-   [x] Domain & Hosting
 -   [ ] Go through todo's
 -   [ ] Finish readme
--   [X] Page state using url
+-   [x] Page state using url
 -   [x] Modal images
 -   [x] Contact page
--   [X] Handle 404 not found for dynamic routes
--   [ ] Responsive styling that actually works
