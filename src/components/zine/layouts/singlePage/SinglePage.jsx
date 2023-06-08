@@ -30,28 +30,22 @@ export default function SinglePage(props) {
   });
 
   return (
-    <div id={s.singlePageLayout}>
-      <ProportionalResize
-        childId={s.page}
-        parentId={s.singlePageLayout}
-        aspectRatio={148 / 210}
-      >
-        <div className={s.page}>
-          {pageIndex > 0 && (
-            <div
-              onClick={() => flipPage(false)}
-              className={s.leftPageFlipper}
-            ></div>
-          )}
-          {pageIndex < length && (
-            <div
-              onClick={() => flipPage(true)}
-              className={s.rightPageFlipper}
-            ></div>
-          )}
-          {getPage(pageIndex)}
-        </div>
-      </ProportionalResize>
-    </div>
+    <ProportionalResize id={s.singlePageLayout} targetId={s.singlePage}>
+      <div id={s.singlePage}>
+        {pageIndex > 0 && (
+          <div
+            onClick={() => flipPage(false)}
+            className={s.leftPageFlipper}
+          ></div>
+        )}
+        {pageIndex < length && (
+          <div
+            onClick={() => flipPage(true)}
+            className={s.rightPageFlipper}
+          ></div>
+        )}
+        {getPage(pageIndex)}
+      </div>
+    </ProportionalResize>
   );
 }

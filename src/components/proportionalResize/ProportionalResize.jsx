@@ -9,6 +9,8 @@ export default function ProportionalResize(props) {
   useEffect(() => {
     const parent = document.getElementById(id);
     const child = document.getElementById(targetId);
+
+    /* if first render pre calculate scale */
     if (firstRender && parent && child) {
       setFristRender(false);
       const scale = Math.min(
@@ -19,6 +21,7 @@ export default function ProportionalResize(props) {
         transform: `scale(${scale})`,
       });
     }
+
     const resize = () => {
       const scale = Math.min(
         parent.offsetWidth / child.offsetWidth,
