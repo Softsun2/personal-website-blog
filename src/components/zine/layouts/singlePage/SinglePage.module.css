@@ -1,18 +1,14 @@
 #singlePageLayout {
-  position: relative;
-  width: 100%;
+  font-size: 1rem;
+  height: 100%;
 }
 
 #singlePageLayout .page {
-  position: absolute;
-  top: 50vh;
-  width: 100%;
-  transform: translate(0, -60%);
+  position: relative;
   aspect-ratio: 148 / 210; /* A5 Zine Aspect Ratio */
+  height: 80vh;
   box-shadow: 0 0 50px rgb(0 0 0 / 0.2);
 }
-
-/*
 #singlePageLayout .leftPageFlipper,
 #singlePageLayout .rightPageFlipper {
   z-index: 1;
@@ -40,4 +36,3 @@
   background-color: black;
   opacity: 5%;
 }
-*/

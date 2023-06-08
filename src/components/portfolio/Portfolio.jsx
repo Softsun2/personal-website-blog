@@ -46,7 +46,7 @@ export default function Portfolio() {
       <Zine
         layout={layout}
         pageContents={portfolioPageContents}
-        footer={Footer}
+        footer={null}
         navigatePage={navigatePage}
       />
     </div>

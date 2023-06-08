@@ -1,0 +1,16 @@
+#container {
+  background-color: grey;
+  height: 80vh;
+}
+
+#testBox {
+  width: 148px;
+  height: 210px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  border: solid;
+  box-sizing: border-box;
+}

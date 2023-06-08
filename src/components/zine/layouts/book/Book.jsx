@@ -21,9 +21,6 @@ export default function Book(props) {
   const { getPage, navigatePage, length } = props;
   let pageIndex = parseInt(useParams().pageIndex);
 
-  if (pageIndex >= length) {
-    /* throw a 404 not found */
-  }
   if (pageIndex > 0) {
     /* TODO: consider rerouting to normalized pageIndex if even */
     pageIndex = 2 * Math.round(pageIndex / 2) - 1; /* round down to odd */

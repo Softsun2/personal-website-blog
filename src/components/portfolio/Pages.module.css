@@ -1,9 +1,11 @@
+/*
 :root {
   font-size: calc(0.5em + 1vmin);
   line-height: calc(0.25em + 1.25vmin);
   margin: 1.4rem;
   position: relative;
 }
+*/
 a {
   color: black;
   text-decoration: underline;
