@@ -15,15 +15,15 @@ export default function ProportionalResize(props) {
   const [style, setStyle] = useState({ visibility: "hidden" });
 
   useEffect(() => {
-    const parent = document.getElementById(id);
-    const child = parent.children[0];
+    const container = document.getElementById(id);
+    const absoluteElement = container.children[0].children[0];
 
     /* if first render pre calculate scale */
-    if (firstRender && parent && child) {
+    if (firstRender && container && absoluteElement) {
       setFristRender(false);
       const scale = Math.min(
-        parent.offsetWidth / child.offsetWidth,
-        parent.offsetHeight / child.offsetHeight
+        container.offsetWidth / absoluteElement.offsetWidth,
+        container.offsetHeight / absoluteElement.offsetHeight
       );
       setStyle({
         transform: `scale(${scale})`,
@@ -32,8 +32,8 @@ export default function ProportionalResize(props) {
 
     const resize = () => {
       const scale = Math.min(
-        parent.offsetWidth / child.offsetWidth,
-        parent.offsetHeight / child.offsetHeight
+        container.offsetWidth / absoluteElement.offsetWidth,
+        container.offsetHeight / absoluteElement.offsetHeight
       );
       setStyle({
         transform: `scale(${scale})`,
@@ -46,8 +46,10 @@ export default function ProportionalResize(props) {
   }, []);
 
   return (
-    <div id={id} className={s.proportionalResizeElement} style={style}>
-      {children}
+    <div id={id} className={className}>
+      <div className={s.proportionalResizeElement} style={style}>
+        {children}
+      </div>
     </div>
   );
 }

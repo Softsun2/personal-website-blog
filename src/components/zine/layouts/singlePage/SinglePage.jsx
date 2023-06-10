@@ -30,7 +30,7 @@ export default function SinglePage(props) {
   });
 
   return (
-    <ProportionalResize id={s.singlePageLayout} targetId={s.singlePage}>
+    <ProportionalResize id={s.singlePageLayout}>
       <div id={s.singlePage}>
         {pageIndex > 0 && (
           <div
