@@ -4,11 +4,19 @@ function aspectRatio() {
   return window.innerWidth / window.innerHeight;
 }
 
-function getPageScale(initialWidth, initialHeight) {
-  return Math.min(
-    window.innerWidth / initialWidth,
-    window.innerHeight / initialHeight
-  );
+function getElementWidth(element) {
+  try {
+    return parseFloat(getComputedStyle(element).width);
+  } catch (e) {
+    return parseFloat(element.currentStyle.width);
+  }
+}
+function getElementHeight(element) {
+  try {
+    return parseFloat(getComputedStyle(element).height);
+  } catch (e) {
+    return parseFloat(element.currentStyle.height);
+  }
 }
 
 // formats a list of class names for CSS
@@ -65,5 +73,6 @@ export {
   setCookie,
   getCookie,
   aspectRatio,
-  getPageScale,
+  getElementWidth,
+  getElementHeight,
 };
