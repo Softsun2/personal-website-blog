@@ -11,10 +11,9 @@ export default function ProportionalResize(props) {
     const container = document.getElementById(id);
     const absoluteElement = container.children[0];
 
+    /* this only works if this component is rendered last! */
     if (firstRender && container && absoluteElement) {
       setFristRender(false);
-      console.log(`container width: ${getElementWidth(container)}`);
-      console.log(`container height: ${getElementHeight(container)}`);
       const scale = Math.min(
         getElementWidth(container) / absoluteElement.offsetWidth,
         getElementHeight(container) / absoluteElement.offsetHeight
@@ -39,7 +38,7 @@ export default function ProportionalResize(props) {
     <div
       id={id}
       className={className}
-      style={firstRender ? { visibility: "hidden" } : null}
+      style={firstRender ? { visibility: "hidden" } : {}}
     >
       {children}
     </div>
