@@ -10,9 +10,9 @@ Learning React
 
 ## Todo
 
--   [ ] Responsive styling that actually works
+-   [X] Responsive styling that actually works
     -   [x] Use css `scale()` and javascript!
-        -   [ ] Design is not good/intuitive to use
+        -   [X] Design needs to be better/intuitive to use
     -   [ ] Nothing should ever be cut off the screen
     -   [ ] Nothing should require scrolling
     -   [ ] Switching layouts feels natural and desired
@@ -31,6 +31,7 @@ Learning React
 -   [ ] Go through todo's
 -   [ ] Finish readme
 -   [x] Page state using url
--   [x] Modal images
+-   [ ] Modal images
+    -   [ ] Make modals use `createPortal`
 -   [x] Contact page
 -   [x] Contact page
