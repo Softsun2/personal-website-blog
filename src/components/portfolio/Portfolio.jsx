@@ -4,16 +4,17 @@ import SinglePage from "../zine/layouts/singlePage/SinglePage";
 import s from "./Portfolio.module.css";
 import { portfolioPageContents } from "./Pages";
 import { useEffect, useState } from "react";
-import { aspectRatio, classNames } from "../../util/util";
-import { useNavigate, useParams } from "react-router-dom";
+import { aspectRatio } from "../../util/util";
+import { useNavigate } from "react-router-dom";
 
 export default function Portfolio() {
   const navigate = useNavigate();
   const zineAspectRatio = 210 / 148;
   const [layout, setLayout] = useState(
-    aspectRatio() >= zineAspectRatio ? () => Book : () => SinglePage
+    aspectRatio() >= zineAspectRatio ? () => SinglePage : () => SinglePage
   );
 
+  /*
   useEffect(() => {
     const resize = () => {
       if (layout === Book && aspectRatio() < zineAspectRatio) {
@@ -27,22 +28,14 @@ export default function Portfolio() {
       window.removeEventListener("resize", resize);
     };
   });
-
-  const Footer = ({ page }) => {
-    const className = page % 2 === 0 ? "rightPage" : "leftPage";
-    return (
-      <footer className={classNames(s.zineFooter, s[className])}>
-        <p>{page}</p>
-      </footer>
-    );
-  };
+  */
 
   const navigatePage = (pageIndex) => {
     navigate(`/portfolio/${pageIndex}`);
   };
 
   return (
-    <div id="portfolio">
+    <div id={s.portfolio}>
       <Zine
         layout={layout}
         pageContents={portfolioPageContents}

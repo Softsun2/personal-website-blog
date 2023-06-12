@@ -30,13 +30,9 @@ export default function Zine(props) {
     );
   };
 
-  return (
-    <div id={s.zine}>
-      {createElement(layout, {
-        getPage: getPage,
-        navigatePage: navigatePage,
-        length: pageContents.length,
-      })}
-    </div>
-  );
+  return createElement(layout, {
+    getPage: getPage,
+    navigatePage: navigatePage,
+    length: pageContents.length,
+  });
 }

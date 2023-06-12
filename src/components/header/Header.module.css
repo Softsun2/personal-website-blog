@@ -1,11 +1,11 @@
 /* if I need to move the entire header around later */
 .header {
-  margin-bottom: 2em;
+  margin-bottom: 2rem;
 }
 
 .name {
   margin: 0%;
-  margin-bottom: 0.1em;
+  margin-bottom: 0.1rem;
 }
 
 .nameImg {
@@ -21,7 +21,7 @@
 .rootNav {
   display: flex;
   flex-direction: row;
-  gap: 0.25em;
+  gap: 0.25rem;
   margin: 0%;
 }
 .rootNavLink {
@@ -29,6 +29,6 @@
   text-decoration: none;
   font-size: 18px;
 }
-.activeNavLink{
+.activeNavLink {
   color: black;
 }

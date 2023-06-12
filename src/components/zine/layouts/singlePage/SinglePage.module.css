@@ -1,14 +1,18 @@
 #singlePageLayout {
-  font-size: 1rem;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #singlePageLayout #singlePage {
-  position: relative;
-  aspect-ratio: 148 / 210; /* A5 Zine Aspect Ratio */
-  height: 80vh;
+  /* A5 Zine Aspect Ratio */
+  width: 148px;
+  height: 210px;
   box-shadow: 0 0 50px rgb(0 0 0 / 0.2);
 }
+
+/*
 #singlePageLayout .leftPageFlipper,
 #singlePageLayout .rightPageFlipper {
   z-index: 1;
@@ -17,7 +21,7 @@
   position: absolute;
   left: 0;
   width: 1.4em;
-  height: 80vh;
+  height: 100%;
 }
 #singlePageLayout .leftPageFlipper:hover {
   cursor: w-resize;
@@ -29,10 +33,11 @@
   position: absolute;
   right: 0;
   width: 1.4em;
-  height: 80vh;
+  height: 100%;
 }
 #singlePageLayout .rightPageFlipper:hover {
   cursor: e-resize;
   background-color: black;
   opacity: 5%;
 }
+*/

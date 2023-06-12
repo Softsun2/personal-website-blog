@@ -8,7 +8,7 @@ import {
 } from "react-router-dom";
 import { composeComponents } from "./util/util";
 
-import "./index.css";
+import s from "./index.module.css";
 import Header from "./components/header/Header";
 import Welcome from "./components/welcome/Welcome";
 import Cmaebrea from "./components/cmaebrea/Cmaebrea";
@@ -32,10 +32,12 @@ const router = createBrowserRouter([
   },
   {
     path: "/portfolio/:pageIndex",
-    element: composeComponents(
-      // <Welcome />,
-      // <Header navPaths={navPaths} />,
-      <Portfolio />
+    element: (
+      <div className={s.route}>
+        <Welcome />
+        <Header navPaths={navPaths} />
+        <Portfolio />
+      </div>
     ),
     // errorElement: <NotFound />,
   },
@@ -48,7 +50,7 @@ const router = createBrowserRouter([
     path: "/cmaebrea/:page",
     element: composeComponents(
       // <Welcome />,
-      // <Header navPaths={navPaths} />,
+      <Header navPaths={navPaths} />,
       <Cmaebrea />
     ),
     // errorElement: <NotFound />,
