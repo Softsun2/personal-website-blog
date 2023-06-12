@@ -11,7 +11,7 @@ export default function ProportionalResize(props) {
     const container = document.getElementById(id);
     const absoluteElement = container.children[0];
 
-    /* this only works if this component is rendered last! */
+    // first render
     if (firstRender && container && absoluteElement) {
       setFristRender(false);
       const scale = Math.min(
@@ -21,16 +21,19 @@ export default function ProportionalResize(props) {
       absoluteElement.style.transform = `scale(${scale})`;
     }
 
-    const resize = () => {
+    // element resize event
+    const resizeObserver = new ResizeObserver(() => {
       const scale = Math.min(
         getElementWidth(container) / absoluteElement.offsetWidth,
         getElementHeight(container) / absoluteElement.offsetHeight
       );
       absoluteElement.style.transform = `scale(${scale})`;
-    };
-    window.addEventListener("resize", resize);
+    });
+    resizeObserver.observe(container);
+
+    // clean-up
     return () => {
-      window.removeEventListener("resize", resize);
+      resizeObserver.unobserve(container);
     };
   }, []);
 

@@ -4,9 +4,9 @@ import name from "../../image/NAME.png";
 import { classNames } from "../../util/util";
 
 export default function Header(props) {
-  const { navPaths } = props;
+  const { navPaths, onLoad } = props;
   return (
-    <div className={s.header}>
+    <div className={s.header} onLoad={onLoad}>
       <header>
         <h1 className={s.name}>
           <Link to="/">
