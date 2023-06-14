@@ -69,7 +69,7 @@ const TableOfContents = ({ navigatePage }) => {
   ];
 
   return (
-    <div id={s.tableOfContentsPage}>
+    <div id={s.tableOfContents}>
       <h2>Contents</h2>
       <ul>
         {pages.map((pageName, i) => {
@@ -91,7 +91,7 @@ const TableOfContents = ({ navigatePage }) => {
 };
 const EducationPage = () => {
   return (
-    <div id={s.educationPage}>
+    <div id={s.education}>
       <div id={s.campusImages}>
         <figure>
           <ImageModal id={s.campusDay} src={campusDay} alt="campusDay" />
@@ -136,7 +136,7 @@ const EducationPage = () => {
 };
 const ExperiencePage = () => {
   return (
-    <div id={s.experiencePage}>
+    <div id={s.experience}>
       <h2>Experience</h2>
       <div id={s.experiences}>
         <div className={s.experience}>
@@ -216,7 +216,7 @@ const ExperiencePage = () => {
 };
 const FibBSPViTodoPage = () => {
   return (
-    <div id={s.fibBSPViTodoPage}>
+    <div id={s.fibBSPViTodo}>
       <h2>
         <a
           href="https://github.com/Softsun2/fibBSPViTodo.git"
@@ -249,13 +249,13 @@ const FibBSPViTodoPage = () => {
 };
 const TuriPage = () => {
   return (
-    <div id={s.turiPage}>
+    <div id={s.turi}>
       <h2>Turi</h2>
-      <figure id={s.turiGroupFig}>
-        <ImageModal id={s.turiGroupImg} src={turiGroup} alt="turiGroup" />
-        <figcaption>Competition Day (I'm in orange), 2022</figcaption>
-      </figure>
-      <div id={s.turiContent}>
+      <div className={s.grid}>
+        <figure id={s.turiGroupFig}>
+          <ImageModal id={s.turiGroupImg} src={turiGroup} alt="turiGroup" />
+          <figcaption>Competition Day (I'm in orange), 2022</figcaption>
+        </figure>
         <div id={s.carImages}>
           <figure>
             <ImageModal id={s.turiGif} src={turiGif} alt="turiGif" />
@@ -266,7 +266,7 @@ const TuriPage = () => {
             <figcaption>Final Robot Assembly</figcaption>
           </figure>
         </div>
-        <p>
+        <p id={s.turiDescription}>
           Last May I had the opportunity to take a mechatronics class abroad in
           Switzerland at the Zurich University of Applied Sciences. Teams were
           tasked with constructing a line following robot. This was my first
@@ -291,7 +291,7 @@ const ThisPage = () => {
     );
   });
   return (
-    <div id={s.thisPage}>
+    <div id={s.this}>
       <h2>
         <a
           href="https://github.com/Softsun2/personal-website-blog.git"
@@ -314,7 +314,7 @@ const ThisPage = () => {
 };
 const ContributionPage = () => {
   return (
-    <div id={s.contributionPage}>
+    <div id={s.contribution}>
       <h2>Flavours (Contributor)</h2>
       <figure id={s.declareDemo}>
         <ImageModal
@@ -387,7 +387,7 @@ const ContributionPage = () => {
 };
 const Contact = () => {
   return (
-    <div id={s.contactPage}>
+    <div id={s.contact}>
       <ImageModal id={s.radarHouse} src={radarHouse} alt="radarHouse" />
       <p id={s.thanks}>
         In a sea of digital commotion thank you for discovering my tiny diy

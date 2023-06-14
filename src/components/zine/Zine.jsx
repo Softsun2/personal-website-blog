@@ -5,7 +5,8 @@ import { useParams } from "react-router-dom";
 export function Page(props) {
   const { header, children, footer } = props;
   return (
-    <div>
+    // TODO: Eliminate this unnecessary div
+    <div className={s.zinePage}>
       {header}
       {children}
       {footer}

@@ -1,6 +1,7 @@
 /* if I need to move the entire header around later */
 .header {
   margin-bottom: 2rem;
+  padding: 1.4em;
 }
 
 .name {
