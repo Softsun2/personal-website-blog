@@ -13,8 +13,6 @@ Learning React
 -   [X] Responsive styling that actually works
     -   [x] Use css `scale()` and javascript!
         -   [X] Design needs to be better/intuitive to use
-    -   [ ] Nothing should ever be cut off the screen
-    -   [ ] Nothing should require scrolling
     -   [ ] Switching layouts feels natural and desired
 -   [ ] Refactor for better performance, component code is being re-ran when it probably shouldn't be. It's slow on mobile.
 -   [ ] Refactor Zine to class components, just makes more sense.
@@ -31,7 +29,6 @@ Learning React
 -   [ ] Go through todo's
 -   [ ] Finish readme
 -   [x] Page state using url
--   [ ] Modal images
-    -   [ ] Make modals use `createPortal`
--   [x] Contact page
+-   [X] Modal images
+    -   [X] Make modals use `createPortal`
 -   [x] Contact page

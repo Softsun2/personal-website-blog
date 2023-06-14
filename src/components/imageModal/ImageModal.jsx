@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import s from "./ImageModal.module.css";
+import { createPortal } from "react-dom";
 
 export default function ImageModal(props) {
   const { id, className, src, alt } = props;
@@ -17,29 +18,26 @@ export default function ImageModal(props) {
     };
   });
 
-  return (
+  const imgNode = (
+    <img
+      onClick={() => setModal(true)}
+      id={id}
+      className={className}
+      src={src}
+      alt={alt}
+    />
+  );
+  const modalNode = (
     <div>
-      <img
-        onClick={() => setModal(true)}
-        id={id}
-        className={className}
-        src={src}
-        alt={alt}
-      />
-      {modal && (
-        <div>
-          <div className={s.modal}>
-            <img className={s.image} src={src} alt={alt} />
-            <button className={s.exitModal} onClick={() => setModal(false)}>
-              x
-            </button>
-          </div>
-          <div
-            className={s.modalBackdrop}
-            onClick={() => setModal(false)}
-          ></div>
-        </div>
-      )}
+      <div className={s.modal}>
+        <img className={s.image} src={src} alt={alt} />
+        <button className={s.exitModal} onClick={() => setModal(false)}>
+          x
+        </button>
+      </div>
+      <div className={s.modalBackdrop} onClick={() => setModal(false)}></div>
     </div>
   );
+
+  return modal ? createPortal(modalNode, document.body) : imgNode;
 }
