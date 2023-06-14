@@ -1,6 +1,7 @@
 import { createElement, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { classNames } from "../../../../util/util";
+import ProportionalResize from "../../../proportionalResize/ProportionalResize";
 import s from "./Book.module.css";
 
 const BookPage = (props) => {
@@ -55,26 +56,28 @@ export default function Book(props) {
   const isCover = pageIndex === 0 || pageIndex === length - 1;
 
   return (
-    <div id={s.bookLayout}>
-      {isCover && (
-        <BookPage
-          page={getPage(pageIndex)}
-          leftPage={pageIndex % 2 !== 0}
-          flipPage={flipPage}
-        />
-      )}
-      {!isCover && [
-        <BookPage
-          page={getPage(pageIndex)}
-          leftPage={true}
-          flipPage={flipPage}
-        />,
-        <BookPage
-          page={getPage(pageIndex + 1)}
-          leftPage={false}
-          flipPage={flipPage}
-        />,
-      ]}
-    </div>
+    <ProportionalResize id={s.bookLayout}>
+      <div id={s.book}>
+        {isCover && (
+          <BookPage
+            page={getPage(pageIndex)}
+            leftPage={pageIndex % 2 !== 0}
+            flipPage={flipPage}
+          />
+        )}
+        {!isCover && [
+          <BookPage
+            page={getPage(pageIndex)}
+            leftPage={true}
+            flipPage={flipPage}
+          />,
+          <BookPage
+            page={getPage(pageIndex + 1)}
+            leftPage={false}
+            flipPage={flipPage}
+          />,
+        ]}
+      </div>
+    </ProportionalResize>
   );
 }

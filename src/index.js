@@ -23,12 +23,12 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Navigate to="/portfolio/0" />,
-    // errorElement: <NotFound />,
+    errorElement: <NotFound />,
   },
   {
     path: "/portfolio",
     element: <Navigate to="/portfolio/0" />,
-    // errorElement: <NotFound />,
+    errorElement: <NotFound />,
   },
   {
     path: "/portfolio/:pageIndex",
@@ -39,26 +39,26 @@ const router = createBrowserRouter([
         <Portfolio />
       </div>
     ),
-    // errorElement: <NotFound />,
+    errorElement: <NotFound />,
   },
   {
     path: "/cmaebrea",
     element: <Navigate to="/cmaebrea/0" />,
-    // errorElement: <NotFound />,
+    errorElement: <NotFound />,
   },
   {
     path: "/cmaebrea/:page",
     element: composeComponents(
-      // <Welcome />,
+      <Welcome />,
       <Header navPaths={navPaths} />,
       <Cmaebrea />
     ),
-    // errorElement: <NotFound />,
+    errorElement: <NotFound />,
   },
   {
     path: "/testpropresize",
     element: <TestPropResize />,
-    // errorElement: <NotFound />,
+    errorElement: <NotFound />,
   },
 ]);
 

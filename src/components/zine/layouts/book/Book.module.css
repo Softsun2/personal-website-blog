@@ -1,16 +1,23 @@
 #bookLayout {
+  padding: 30px;
+  height: calc(100% - 60px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#bookLayout #book {
   display: flex;
   flex-direction: row;
-  font-size: 1rem;
-  margin: 1.4rem;
-  justify-content: center;
 }
 
 #bookLayout .bookPage {
-  aspect-ratio: 148 / 210; /* A5 Zine Aspect Ratio */
-  height: 80vh;
+  /* A5 Zine Aspect Ratio */
+  width: 148px;
+  height: 210px;
   box-shadow: 0 0 50px rgb(0 0 0 / 0.2);
 }
+
 #bookLayout .rightPage,
 #bookLayout .leftPage {
   position: relative;
@@ -21,8 +28,8 @@
 #bookLayout .rightPage .pageFlipper {
   position: absolute;
   right: 0;
-  width: 1.4rem;
-  height: 80vh;
+  width: 6px;
+  height: 100%;
 }
 #bookLayout .rightPage .pageFlipper:hover {
   cursor: e-resize;
@@ -33,8 +40,8 @@
 #bookLayout .leftPage .pageFlipper {
   position: absolute;
   left: 0;
-  width: 1.4rem;
-  height: 80vh;
+  width: 6px;
+  height: 100%;
 }
 #bookLayout .leftPage .pageFlipper:hover {
   cursor: w-resize;
