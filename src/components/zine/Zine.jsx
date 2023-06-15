@@ -25,7 +25,7 @@ export default function Zine(props) {
 
   const getPage = (i) => {
     return (
-      <Page header={header} footer={footer}>
+      <Page header={header} footer={createElement(footer, { page: i })}>
         {createElement(pageContents[i], { navigatePage: navigatePage })}
       </Page>
     );
