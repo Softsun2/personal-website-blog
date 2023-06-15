@@ -34,7 +34,7 @@ const router = createBrowserRouter([
     path: "/portfolio/:pageIndex",
     element: (
       <div className={s.route}>
-        // <Welcome />
+        {/*<Welcome />*/}
         <Header navPaths={navPaths} />
         <Portfolio />
       </div>
@@ -49,7 +49,7 @@ const router = createBrowserRouter([
   {
     path: "/cmaebrea/:page",
     element: composeComponents(
-      // <Welcome />,
+        {/*<Welcome />*/},
       <Header navPaths={navPaths} />,
       <Cmaebrea />
     ),
