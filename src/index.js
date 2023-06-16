@@ -51,11 +51,6 @@ const router = createBrowserRouter([
     element: composeComponents(<Header navPaths={navPaths} />, <Cmaebrea />),
     errorElement: <NotFound />,
   },
-  {
-    path: "/testpropresize",
-    element: <TestPropResize />,
-    errorElement: <NotFound />,
-  },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
