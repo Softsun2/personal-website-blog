@@ -1,10 +1,11 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ProportionalResize from "../../../proportionalResize/ProportionalResize";
 import s from "./SinglePage.module.css";
+import { classNames } from "../../../../util/util";
 
 export default function SinglePage(props) {
-  const { getPage, navigatePage, length } = props;
+  const { getPage, navigatePage, length, familiar } = props;
   const pageIndex = parseInt(useParams().pageIndex);
 
   const flipPage = (forward) => {
@@ -35,13 +36,19 @@ export default function SinglePage(props) {
         {pageIndex > 0 && (
           <div
             onClick={() => flipPage(false)}
-            className={s.leftPageFlipper}
+            className={classNames(
+              s.leftPageFlipper,
+              !familiar ? s.blink : null
+            )}
           ></div>
         )}
         {pageIndex < length && (
           <div
             onClick={() => flipPage(true)}
-            className={s.rightPageFlipper}
+            className={classNames(
+              s.rightPageFlipper,
+              !familiar ? s.blink : null
+            )}
           ></div>
         )}
         {getPage(pageIndex)}

@@ -210,7 +210,7 @@ img {
 #contribution {
   height: calc(100% - 2 * var(--page-padding));
   padding: var(--page-padding);
-  font-size: calc(0.8 * var(--page-font-size));
+  font-size: calc(0.75 * var(--page-font-size));
 }
 #contribution img {
   width: 30px;

@@ -25,8 +25,7 @@
 }
 #singlePageLayout .leftPageFlipper:hover {
   cursor: w-resize;
-  background-color: black;
-  opacity: 5%;
+  background-color: rgb(0 0 0 / 0.05);
 }
 
 #singlePageLayout .rightPageFlipper {
@@ -37,6 +36,20 @@
 }
 #singlePageLayout .rightPageFlipper:hover {
   cursor: e-resize;
-  background-color: black;
-  opacity: 5%;
+  background-color: rgb(0 0 0 / 0.05);
+}
+
+@keyframes blink {
+  0% {
+  }
+  100% {
+    background-color: rgb(0 0 0 / 0.1);
+  }
+}
+.blink {
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-iteration-count: 8;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
 }

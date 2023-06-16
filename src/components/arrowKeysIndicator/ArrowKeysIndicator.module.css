@@ -1,0 +1,57 @@
+/* hide arrow key indicator on devices that most likely do not have a keyboard */
+@media (hover: none) {
+  .arrowKeysIndicator {
+    visibility: hidden;
+  }
+}
+
+.arrowKeysIndicator {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 30px;
+  height: 50px;
+  width: 100px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.arrowKeysIndicator p {
+  text-align: center;
+  margin: 0;
+  border: solid;
+  border-width: 0.5px;
+  box-sizing: border-box;
+}
+
+.upArrow {
+  grid-row: 1;
+  grid-column: 2;
+}
+.downArrow {
+  grid-row: 2;
+  grid-column: 2;
+}
+.leftArrow {
+  grid-row: 2;
+  grid-column: 1;
+}
+.rightArrow {
+  grid-row: 2;
+  grid-column: 3;
+}
+
+@keyframes blink {
+  0% {
+  }
+  100% {
+    background-color: rgb(0 0 0 / 0.1);
+  }
+}
+.blink p {
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-iteration-count: 8;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}

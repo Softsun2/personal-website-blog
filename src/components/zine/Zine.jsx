@@ -1,6 +1,8 @@
 import s from "./Zine.module.css";
 import { createElement } from "react";
 import { useParams } from "react-router-dom";
+import { getCookie, setCookie } from "../../util/util";
+import ArrowKeysIndicator from "../arrowKeysIndicator/ArrowKeysIndicator";
 
 export function Page(props) {
   const { header, children, footer } = props;
@@ -23,6 +25,11 @@ export default function Zine(props) {
     throw new Response("Not Found", { status: 404 });
   }
 
+  const familiarCookie = getCookie("familiar");
+  if (!familiarCookie) {
+    setCookie("familiar", true, 7);
+  }
+
   const getPage = (i) => {
     return (
       <Page header={header} footer={createElement(footer, { page: i })}>
@@ -31,9 +38,15 @@ export default function Zine(props) {
     );
   };
 
-  return createElement(layout, {
-    getPage: getPage,
-    navigatePage: navigatePage,
-    length: pageContents.length,
-  });
+  return (
+    <div id={s.zine}>
+      {createElement(layout, {
+        getPage: getPage,
+        navigatePage: navigatePage,
+        length: pageContents.length,
+        familiar: familiarCookie,
+      })}
+      {!familiarCookie && <ArrowKeysIndicator />}
+    </div>
+  );
 }
