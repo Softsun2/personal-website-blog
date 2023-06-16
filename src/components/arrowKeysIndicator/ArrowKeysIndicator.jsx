@@ -2,7 +2,7 @@ import { classNames } from "../../util/util";
 import s from "./ArrowKeysIndicator.module.css";
 
 export default function ArrowKeysIndicator(props) {
-  return window.Touch (
+  return (
     <div className={s.arrowKeysIndicator}>
       <div className={s.upArrow}>
         <p>^</p>

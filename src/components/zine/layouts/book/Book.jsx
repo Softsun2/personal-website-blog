@@ -5,21 +5,24 @@ import ProportionalResize from "../../../proportionalResize/ProportionalResize";
 import s from "./Book.module.css";
 
 const BookPage = (props) => {
-  const { page, leftPage, flipPage } = props;
+  const { page, leftPage, flipPage, familiar } = props;
   const className = leftPage ? "leftPage" : "rightPage";
   const clickToFlipPage = leftPage
     ? () => flipPage(false)
     : () => flipPage(true);
   return (
     <div className={classNames(s.bookPage, s[className])}>
-      <div onClick={clickToFlipPage} className={s.pageFlipper}></div>
+      <div
+        onClick={clickToFlipPage}
+        className={classNames(s.pageFlipper, !familiar ? s.blink : null)}
+      ></div>
       {page}
     </div>
   );
 };
 
 export default function Book(props) {
-  const { getPage, navigatePage, length } = props;
+  const { getPage, navigatePage, length, familiar } = props;
   let pageIndex = parseInt(useParams().pageIndex);
 
   if (pageIndex > 0) {
@@ -63,6 +66,7 @@ export default function Book(props) {
             page={getPage(pageIndex)}
             leftPage={pageIndex % 2 !== 0}
             flipPage={flipPage}
+            familiar={familiar}
           />
         )}
         {!isCover && [
@@ -70,11 +74,13 @@ export default function Book(props) {
             page={getPage(pageIndex)}
             leftPage={true}
             flipPage={flipPage}
+            familiar={familiar}
           />,
           <BookPage
             page={getPage(pageIndex + 1)}
             leftPage={false}
             flipPage={flipPage}
+            familiar={familiar}
           />,
         ]}
       </div>
