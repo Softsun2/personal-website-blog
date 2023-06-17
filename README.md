@@ -1,25 +1,17 @@
 # Personal Website/Blog
 
-Learning React
-
-## Zine
-
-## Usage
-
-## License
+This is a simple static portfolio website I made to get my feet wet with React. Learned a bit about components, `react-router`, better css practices, proportional resizing, and cookies.
 
 ## Todo
 
 -   [ ] Refactor for better performance, component code is being re-ran when it probably shouldn't be. It's slow on mobile.
 -   [ ] Refactor Zine to class components, just makes more sense.
--   [ ] Welcome cookie event.
+-   [X] Familiar cookie event.
     -   [x] Cookie event.
-    -   [ ] Styling.
-    -   [ ] Modal?
+    -   [X] Arrowkey hints.
+    -   [X] Side bar hints.
 -   [ ] Go through todo's.
--   [ ] Finish readme.
-
--   [ ] Cmaebrea.
+-   [X] Finish readme.
 -   [X] Responsive styling that actually works.
     -   [x] Use css `scale()` and javascript!
         -   [X] Design needs to be better/intuitive to use.

@@ -2,7 +2,7 @@ import s from "./Zine.module.css";
 import { createElement } from "react";
 import { useParams } from "react-router-dom";
 import { getCookie, setCookie } from "../../util/util";
-import ArrowKeysIndicator from "../arrowKeysIndicator/ArrowKeysIndicator";
+import ArrowKeyHint from "../arrowKeyHint/ArrowKeyHint";
 
 export function Page(props) {
   const { header, children, footer } = props;
@@ -46,7 +46,7 @@ export default function Zine(props) {
         length: pageContents.length,
         familiar: familiarCookie,
       })}
-      {!familiarCookie && <ArrowKeysIndicator />}
+      {!familiarCookie && <ArrowKeyHint />}
     </div>
   );
 }

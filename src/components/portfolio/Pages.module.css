@@ -7,6 +7,7 @@
 a {
   color: black;
   text-decoration: underline;
+  text-decoration-thickness: 0px;
 }
 a:hover {
   cursor: pointer;
@@ -87,6 +88,7 @@ img {
 }
 #tableOfContents .pageNavLink {
   text-decoration: underline;
+  text-decoration-thickness: 0px;
 }
 #tableOfContents .pageNavLink:hover {
   cursor: pointer;

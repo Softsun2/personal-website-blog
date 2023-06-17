@@ -45,7 +45,11 @@ async function getLastCommit(owner, repo) {
     })
     .then((res) => {
       const commits = res.data;
-      return new Date(commits[0].commit.committer.date).toDateString();
+      const date = new Date(commits[0].commit.committer.date);
+      const month = `${date.getMonth() + 1}`.padStart(2, "0");
+      const day = `${date.getDate()}`.padStart(2, "0");
+      const year = date.getFullYear() % 100;
+      return `${month}/${day}/${year}`;
     });
 }
 

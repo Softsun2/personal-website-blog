@@ -112,10 +112,10 @@ const EducationPage = () => {
           Twin Cities in December 2022. I entered university with an undeclared
           major and no prior programming experience. Though, I grew up using
           computers, a part of me lives within every machine I’ve operated.
-          Naturally, I was drawn to enroll in an introductory computer science
-          course. I quickly became absorbed by design, implementation, and
-          analytical concepts. It clicked with me, it was exciting; it still is.
-          The satisfaction of completing my first real coding binge was surreal.
+          Naturally, I enrolled in an introductory computer science course. I
+          quickly became absorbed by design, implementation, and analytical
+          concepts. It clicked with me, it was exciting; it still is. The
+          satisfaction of completing my first real coding binge was surreal.
         </p>
         <p>
           I took care in my studies and sought the highest quality solutions I
@@ -191,16 +191,14 @@ const ExperiencePage = () => {
               Upon completing projects and assignments I enjoyed helping other
               students on class discussion boards. Especially coming from a
               position where I once needed more help than other students. I
-              wanted to help those in a position I was once familiar with. At
-              the same time, I was horridly anxious to take on a leadership
-              role.
+              wanted to help those in a position I was familiar with. At the
+              same time, I was horridly anxious to take on a leadership role.
             </p>
             <p>
               I TA’d an advanced programming principles class taught through the
-              lens of functional programming (in OCaml). This role was far
-              beyond my range of comfort but with patience and faith in my
-              knowledge eventually supervising labs holding office hours felt
-              natural.
+              lens of functional programming (in OCaml). This role was outside
+              range of comfort but with patience and faith in my experience
+              eventually supervising labs holding office hours felt natural.
             </p>
             <p>
               Besides directly interacting with students I developed a grading
@@ -236,7 +234,7 @@ const FibBSPViTodoPage = () => {
           FibBSPViTodo is a minimalist take on the typical to-do web app.
           FibBSPViTodo uses binary space partitioning in a Fibonacci layout to
           display tasks, similar to layouts of common Unix window managers such
-          as DWM (my favorite!), BSPWM, and I3. The user can interact with the
+          as DWM (my favorite!), Yabai, and I3. The user can interact with the
           to-do tasks via basic Vi keymaps and motions. Special commands are
           implemented to filter tasks based on completion status. I was
           motivated to build this project to better understand DOM manipulation
@@ -272,12 +270,12 @@ const TuriPage = () => {
           tasked with constructing a line following robot. This was my first
           time working with a team consisting of mechanical engineers, computer
           engineers, and computer scientists. Our team name was Turi, which is
-          slang for tourist in Swiss German. The aspect of designing software
-          with hardware in mind was an engaging challenge. It was pleasant to
-          develop code that took on a different structure than typical computer
-          science projects. Implementing custom sensor drivers, a proportional
-          control system and obstacle avoidance was rewarding. I was proud that
-          our robot came in second place!
+          slang for tourist (especially American) in Swiss German. The aspect of
+          designing software with hardware in mind was an engaging challenge. It
+          was pleasant to develop code that took on a different structure than
+          typical computer science projects. Implementing custom sensor drivers,
+          a proportional control system and obstacle avoidance was rewarding. I
+          was proud that our robot came in second place!
         </p>
       </div>
     </div>
@@ -303,10 +301,11 @@ const ThisPage = () => {
       </h2>
       <p>
         With a growing interest in web development, I wanted to learn the
-        front-end framework React. The goal of this website is to display my
-        experience while becoming familiar with one of the most widely used
-        frameworks. I’ve enjoyed learning about seamless single-page
-        applications, the composability of components, and responsive design.
+        front-end library React as well as practice up on my CSS skills. The
+        goal of this website is to display my experience while becoming a more
+        versatile web developer. I’ve enjoyed learning about seamless
+        single-page applications, the composability of components, and
+        responsive design.
       </p>
       <p>Last commit: {lastCommit}</p>
     </div>
