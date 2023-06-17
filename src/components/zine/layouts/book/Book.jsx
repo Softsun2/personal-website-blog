@@ -1,4 +1,4 @@
-import { createElement, useEffect } from "react";
+import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { classNames } from "../../../../util/util";
 import ProportionalResize from "../../../proportionalResize/ProportionalResize";

@@ -4,20 +4,14 @@ import {
   createBrowserRouter,
   Navigate,
   RouterProvider,
-  useRouteError,
 } from "react-router-dom";
-import { composeComponents } from "./util/util";
 
 import s from "./index.module.css";
 import Header from "./components/header/Header";
-import Welcome from "./components/welcome/Welcome";
-import Cmaebrea from "./components/cmaebrea/Cmaebrea";
 import Portfolio from "./components/portfolio/Portfolio";
 import NotFound from "./components/notFound/NotFound";
-import TestPropResize from "./components/proportionalResize/TestPropResize";
 
 /* paths that should be rendered in the nav */
-const navPaths = ["/portfolio", "/cmaebrea"];
 /* this is dumb haha */
 const router = createBrowserRouter([
   {
@@ -34,28 +28,17 @@ const router = createBrowserRouter([
     path: "/portfolio/:pageIndex",
     element: (
       <div className={s.route}>
-        {/*<Welcome />*/}
-        <Header navPaths={navPaths} />
+        <Header />
         <Portfolio />
       </div>
     ),
-    errorElement: <NotFound />,
-  },
-  {
-    path: "/cmaebrea",
-    element: <Navigate to="/cmaebrea/0" />,
-    errorElement: <NotFound />,
-  },
-  {
-    path: "/cmaebrea/:page",
-    element: composeComponents(<Header navPaths={navPaths} />, <Cmaebrea />),
     errorElement: <NotFound />,
   },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  //<React.StrictMode>
+  // <React.StrictMode>
   <RouterProvider router={router} />
-  //</React.StrictMode>
+  // </React.StrictMode>
 );
