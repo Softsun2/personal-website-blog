@@ -403,11 +403,7 @@ const Contact = () => {
           </a>
         </li>
         <li>
-          <a
-            href="mailto:okubo.peyton@gmail.com"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a href="mailto:okubo012@umn.edu" target="_blank" rel="noreferrer">
             okubo.peyton@gmail.com
           </a>
         </li>

@@ -20,7 +20,7 @@ This is a simple static portfolio website I made to get my feet wet with React. 
 -   [X] Handle 404 not found for dynamic routes.
     -   [x] Fire error component.
     -   [X] Style error component.
--   Fix footer/header.
+-   [X] Fix footer/header.
 -   [x] Domain & Hosting.
 -   [x] Page state using url.
 -   [X] Modal images.
