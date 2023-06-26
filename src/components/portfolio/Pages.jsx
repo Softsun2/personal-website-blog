@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import s from "./Pages.module.css";
 import ImageModal from "../imageModal/ImageModal";
+import resume from "../../media/master-Peyton-Okubo.pdf";
 import { classNames } from "../../util/util";
 
 // local images
@@ -43,11 +44,7 @@ const InsideFrontCover = () => {
       </p>
       <p>
         This "zine" condenses to my{" "}
-        <a
-          href="master-Peyton-Okubo.pdf"
-          target="_blank"
-          download="Peyton-Okubo-Resume"
-        >
+        <a href={resume} target="_blank" download="Peyton-Okubo.pdf">
           resume
         </a>
         .
@@ -394,11 +391,7 @@ const Contact = () => {
       </p>
       <ul id={s.contactInfo}>
         <li>
-          <a
-            href="master-Peyton-Okubo.pdf"
-            target="_blank"
-            download="Peyton-Okubo-Resume"
-          >
+          <a href={resume} target="_blank" download="Peyton-Okubo.pdf">
             Resume
           </a>
         </li>
