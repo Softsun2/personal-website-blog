@@ -195,7 +195,7 @@ const ExperiencePage = () => {
               I TA’d an advanced programming principles class taught through the
               lens of functional programming (in OCaml). This role was outside
               range of comfort but with patience and faith in my experience
-              eventually supervising labs holding office hours felt natural.
+              eventually supervising labs and holding office hours felt natural.
             </p>
             <p>
               Besides directly interacting with students I developed a grading
@@ -271,7 +271,7 @@ const TuriPage = () => {
           designing software with hardware in mind was an engaging challenge. It
           was pleasant to develop code that took on a different structure than
           typical computer science projects. Implementing custom sensor drivers,
-          a proportional control system and obstacle avoidance was rewarding. I
+          a proportional control system, and obstacle avoidance was rewarding. I
           was proud that our robot came in second place!
         </p>
       </div>
@@ -298,11 +298,10 @@ const ThisPage = () => {
       </h2>
       <p>
         With a growing interest in web development, I wanted to learn the
-        front-end library React as well as practice up on my CSS skills. The
-        goal of this website is to display my experience while becoming a more
-        versatile web developer. I’ve enjoyed learning about seamless
-        single-page applications, the composability of components, and
-        responsive design.
+        front-end library React and further develop my CSS skills. The goal of
+        of this website was to display my experience while becoming a more
+        versatile web developer. I’ve enjoyed learning about single-page
+        applications, the composability of components, and responsive design.
       </p>
       <p>Last commit: {lastCommit}</p>
     </div>
@@ -331,7 +330,7 @@ const ContributionPage = () => {
           >
             Flavours
           </a>{" "}
-          is the tool I use to do so. Flavours is a tool that manages base16
+          is the tool I use to do so. Flavours is a tool that manages base-16
           color schemes across common Unix applications. Where users can apply
           color scheme changes in real-time to their configured apps via the
           command line.
@@ -353,10 +352,9 @@ const ContributionPage = () => {
           </a>
           . I added new fields to the configuration file to declare the color
           scheme and template sources and provided appropriate parsing,
-          retrieving, and installing of these sources. This made it so users
-          could declare the sources of their desired color schemes and templates
-          in their configuration file for Flavours and the sources would be
-          installed automatically.
+          retrieving, and installation of these sources. This made it so users
+          could declare their color scheme and template sources in their
+          configuration file and the sources would be installed automatically.
         </p>
         <p>
           I use Flavours in tandem with an{" "}
