@@ -388,7 +388,7 @@ const Contact = () => {
         </li>
         <li>
           <a href="mailto:okubo012@umn.edu" target="_blank" rel="noreferrer">
-            okubo.peyton@gmail.com
+            okubo012@umn.edu
           </a>
         </li>
         <li>
