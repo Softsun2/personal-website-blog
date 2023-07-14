@@ -157,19 +157,12 @@ const ExperiencePage = () => {
               Last June I joined a research project associated with the concept
               of storing data on synthesized DNA. My team was specifically
               tasked with publishing an in-house DNA synthesis simulation. My
-              role was to develop a{" "}
-              <a
-                href="https://github.com/Softsun2/DMFsim-benchmarking.git"
-                target="_blank"
-                rel="noreferrer"
-              >
-                benchmarking program
-              </a>{" "}
-              to gather hardware metrics to analyze the simulation's
-              performance. Using Python, Pandas, Gephi, and multiprocessing I
-              was able to record over 150,000 data points. I presented this data
-              to our team lead and employees of the funding company. I also
-              helped author and revise the analytical section of the{" "}
+              role was to develop a benchmarking program to gather hardware
+              metrics to analyze the simulation's performance. Using Python,
+              Pandas, Gephi, and multiprocessing I was able to record over
+              150,000 data points. I presented this data to our team lead and
+              employees of the funding company. I also helped author and revise
+              the analytical section of the{" "}
               <a
                 href="https://arxiv.org/abs/2211.15494v3"
                 target="_blank"
