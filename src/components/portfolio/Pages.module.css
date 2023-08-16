@@ -234,7 +234,7 @@ img {
   width: 100%;
 }
 #contribution #desktopDemo {
-  width: 100%;
+  width: 90%;
   aspect-ratio: 3456 / 2234; /* My desktop aspect ratio */
 }
 
