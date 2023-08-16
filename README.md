@@ -6,11 +6,13 @@ This is a simple static portfolio website I made to get my feet wet with React. 
 
 -   [ ] Refactor for better performance, component code is being re-ran when it probably shouldn't be. It's slow on mobile.
 -   [ ] Refactor Zine to class components, just makes more sense.
+-   [ ] Go through todo's (in-code).
+-   [X] Compress media. (used gifsicle for gifs)
+-   [X] Update resume and Research links.
 -   [X] Familiar cookie event.
     -   [x] Cookie event.
     -   [X] Arrowkey hints.
     -   [X] Side bar hints.
--   [ ] Go through todo's.
 -   [X] Finish readme.
 -   [X] Responsive styling that actually works.
     -   [x] Use css `scale()` and javascript!

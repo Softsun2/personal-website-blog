@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import s from "./Pages.module.css";
 import ImageModal from "../imageModal/ImageModal";
-import resume from "../../media/master-Peyton-Okubo.pdf";
+import resume from "../../media/Peyton-Okubo.pdf";
 import { classNames } from "../../util/util";
 
 // local images
@@ -157,7 +157,15 @@ const ExperiencePage = () => {
               Last June I joined a research project associated with the concept
               of storing data on synthesized DNA. My team was specifically
               tasked with publishing an in-house DNA synthesis simulation. My
-              role was to develop a benchmarking program to gather hardware
+              role was to develop a{" "}
+              <a
+                href="https://github.com/Softsun2/DMFsim-benchmarking"
+                target="_blank"
+                rel="noreferrer"
+              >
+                benchmarking program
+              </a>
+	      {" "}to gather hardware
               metrics to analyze the simulation's performance. Using Python,
               Pandas, Gephi, and multiprocessing I was able to record over
               150,000 data points. I presented this data to our team lead and

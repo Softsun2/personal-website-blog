@@ -5,9 +5,8 @@
   --page-padding: 6px;
 }
 a {
-  color: black;
-  text-decoration: underline;
-  text-decoration-thickness: 0px;
+  color: darkblue;
+  text-decoration: none;
 }
 a:hover {
   cursor: pointer;
@@ -85,10 +84,6 @@ img {
   flex-direction: row;
   justify-content: flex-end;
   gap: 1em;
-}
-#tableOfContents .pageNavLink {
-  text-decoration: underline;
-  text-decoration-thickness: 0px;
 }
 #tableOfContents .pageNavLink:hover {
   cursor: pointer;
