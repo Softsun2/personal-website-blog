@@ -4,7 +4,6 @@ This is a simple static portfolio website I made to get my feet wet with React. 
 
 ## Todo
 
--   [ ] Refactor for better performance, component code is being re-ran when it probably shouldn't be. It's slow on mobile.
 -   [ ] Refactor Zine to class components, just makes more sense.
 -   [ ] Go through todo's (in-code).
 -   [X] Compress media. (used gifsicle for gifs)
@@ -15,12 +14,12 @@ This is a simple static portfolio website I made to get my feet wet with React. 
     -   [X] Side bar hints.
 -   [X] Finish readme.
 -   [X] Responsive styling that actually works.
-    -   [x] Use css `scale()` and javascript!
+    -   [x] Use css `scale()` and javascript.
         -   [X] Design needs to be better/intuitive to use.
     -   [X] Switching layouts feels natural and desired.
     -   [X] Mobile looks ok.
 -   [X] Handle 404 not found for dynamic routes.
-    -   [x] Fire error component.
+    -   [X] Fire error component.
     -   [X] Style error component.
 -   [X] Fix footer/header.
 -   [x] Domain & Hosting.
